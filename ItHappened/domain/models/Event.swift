@@ -9,8 +9,8 @@
 import Foundation
 class Event{
     //MARK: Initialization
-    var eventId : String
-    var trackingId : String
+    var eventId : UUID
+    var trackingId : UUID
     var eventDate : Date
     var scale : Double
     var rating : Rating
@@ -20,8 +20,8 @@ class Event{
     
     init(eventId : UUID, trackingId: UUID, date: Date, scale : Double,
          rating: Rating, comment : String, isDeleted: Bool = false){
-        self.eventId = eventId.uuidString
-        self.trackingId = trackingId.uuidString
+        self.eventId = eventId
+        self.trackingId = trackingId
         self.eventDate = date
         self.scale = scale
         self.rating = rating
@@ -63,11 +63,10 @@ class Event{
         self.eventDate = date
     }
     func getEventId() -> UUID{
-        let uuid = UUID(uuidString: self.eventId)
-        return uuid!
+        return self.eventId
     }
     func setEventId(uuid: UUID){
-        self.eventId = uuid.uuidString
+        self.eventId = uuid
     }
     func getScale() -> Double{
         return self.scale
@@ -88,11 +87,10 @@ class Event{
         self.comment = comment
     }
     func getTrackingId() -> UUID{
-        let uuid = UUID(uuidString: self.trackingId)
-        return uuid!
+        return self.trackingId
     }
     func setTrackingId(uuid : UUID){
-        self.trackingId = uuid.uuidString
+        self.trackingId = uuid
     }
     func returnStatus() -> Bool?{
         return self.isDeleted

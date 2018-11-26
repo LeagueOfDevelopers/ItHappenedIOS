@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7099AC8121AACA0C005A8E8B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8021AACA0C005A8E8B /* Event.swift */; };
+		7099AC8321AACA18005A8E8B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8221AACA18005A8E8B /* Rating.swift */; };
+		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
 		70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796921A1801200C39960 /* AppDelegate.swift */; };
 		70B6796C21A1801200C39960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796B21A1801200C39960 /* ViewController.swift */; };
 		70B6796F21A1801200C39960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B6796D21A1801200C39960 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7099AC8021AACA0C005A8E8B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7099AC8221AACA18005A8E8B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		70B6796621A1801200C39960 /* ItHappened.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItHappened.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B6796921A1801200C39960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70B6796B21A1801200C39960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7099AC7E21AAC9D4005A8E8B /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				7099AC7F21AAC9E4005A8E8B /* models */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		7099AC7F21AAC9E4005A8E8B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7099AC8021AACA0C005A8E8B /* Event.swift */,
+				7099AC8221AACA18005A8E8B /* Rating.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		70B6795D21A1801200C39960 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +120,7 @@
 		70B6796821A1801200C39960 /* ItHappened */ = {
 			isa = PBXGroup;
 			children = (
+				7099AC7E21AAC9D4005A8E8B /* domain */,
 				70B6796921A1801200C39960 /* AppDelegate.swift */,
 				70B6796B21A1801200C39960 /* ViewController.swift */,
 				70B6796D21A1801200C39960 /* Main.storyboard */,
@@ -112,6 +136,7 @@
 			children = (
 				70B6797E21A1801300C39960 /* ItHappenedTests.swift */,
 				70B6798021A1801300C39960 /* Info.plist */,
+				7099AC8421AC2C89005A8E8B /* EventTests.swift */,
 			);
 			path = ItHappenedTests;
 			sourceTree = "<group>";
@@ -256,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				70B6796C21A1801200C39960 /* ViewController.swift in Sources */,
+				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */,
 				70B6797F21A1801300C39960 /* ItHappenedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ItHappened;
 				INFOPLIST_FILE = ItHappened/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ItHappened;
 				INFOPLIST_FILE = ItHappened/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

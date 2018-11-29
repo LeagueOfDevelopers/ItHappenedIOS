@@ -13,7 +13,7 @@ class Rating {
     private var rating : Int
     init(ratingValue:Int) throws {
         if ratingValue>10 || ratingValue<1{
-            throw ratingError.IndexOutOfBoundsException("Value of scale out of range")
+            throw error.IndexOutOfBoundsException("Value of scale out of range")
         }
         self.rating = ratingValue
     }
@@ -26,7 +26,7 @@ class Rating {
             self.rating = rating
         }
         else{
-            throw ratingError.IndexOutOfBoundsException("Value of scale out of range")
+            throw error.IndexOutOfBoundsException("Value of scale out of range")
         }
     }
     func checkRating(rating: Int) -> Bool{
@@ -36,7 +36,8 @@ class Rating {
         return true
     }
     //MARK: Enumerators
-    enum ratingError : Error{
+    enum error : Error{
         case IndexOutOfBoundsException(String)
+        case IllegalArgumentException(String)
     }
 }

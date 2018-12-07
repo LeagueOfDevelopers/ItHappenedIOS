@@ -9,13 +9,13 @@
 import Foundation
 
 protocol TrackingDataSourceProtocol {
-    func getTracking(trackingID: UUID) -> Tracking
+    func getTracking(trackingID: UUID) throws -> Tracking
     func getTrackingCollection() -> [Tracking]
     func createTracking (tracking: Tracking)
     func filterEvents (trackingsID : [UUID], fromDate : Date, toDate: Date, scaleComparison : Comparison, scale : Double, ratingComparison : Comparison, rating : Rating, indexFrom: Int, indexTo: Int ) -> [Event]
     func updateTrackingCollection (trackingCollection : [Tracking])
     func setUserID(userID: UUID)
-    func getEvent(eventID : UUID)
+    func getEvent(eventID : UUID) -> Event
     func deleteEvent(eventID: UUID)
     func deleteTracking (trackingID : UUID)
     func updateEvent(event : Event)

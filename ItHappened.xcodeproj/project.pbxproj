@@ -12,6 +12,7 @@
 		7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */; };
 		7063F28521BAA640005E657D /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28421BAA640005E657D /* Comparison.swift */; };
 		7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28621BAA7F9005E657D /* TrackingDataSource.swift */; };
+		7063F28921BAC68F005E657D /* InMemoryRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */; };
 		7099AC8121AACA0C005A8E8B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8021AACA0C005A8E8B /* Event.swift */; };
 		7099AC8321AACA18005A8E8B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8221AACA18005A8E8B /* Rating.swift */; };
 		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
@@ -47,6 +48,7 @@
 		7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7063F28421BAA640005E657D /* Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
 		7063F28621BAA7F9005E657D /* TrackingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSource.swift; sourceTree = "<group>"; };
+		7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepositoryTests.swift; sourceTree = "<group>"; };
 		7099AC8021AACA0C005A8E8B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7099AC8221AACA18005A8E8B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				70B6797E21A1801300C39960 /* ItHappenedTests.swift */,
 				70B6798021A1801300C39960 /* Info.plist */,
 				7099AC8421AC2C89005A8E8B /* EventTests.swift */,
+				7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */,
 			);
 			path = ItHappenedTests;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */,
 				70090B3C21B30A9700AECE8C /* TrackingTests.swift in Sources */,
 				70B6797F21A1801300C39960 /* ItHappenedTests.swift in Sources */,
+				7063F28921BAC68F005E657D /* InMemoryRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ItHappened;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ItHappened/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ItHappened;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ItHappened/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

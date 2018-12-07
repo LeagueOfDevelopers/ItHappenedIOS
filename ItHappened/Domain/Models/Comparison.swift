@@ -9,7 +9,7 @@
 import Foundation
 
 enum Comparison {
-    case More,
-    case Equal,
+    case More
+    case Equal
     case Less
 }

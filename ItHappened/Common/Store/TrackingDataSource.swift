@@ -10,7 +10,8 @@ import Foundation
 
 class TrackingDataSource : TrackingDataSourceProtocol {
     //MARK: Initialization
-    private var trackingCollection : [Tracking]
+    var trackingCollection : [Tracking]
+    
     init(trackingCollection : [Tracking]){
         self.trackingCollection = trackingCollection
     }
@@ -34,10 +35,6 @@ class TrackingDataSource : TrackingDataSourceProtocol {
         trackingCollection.append(tracking)
     }
     
-    func filterEvents(trackingsID: [UUID], fromDate: Date, toDate: Date, scaleComparison: Comparison, scale: Double, ratingComparison: Comparison, rating: Rating, indexFrom: Int, indexTo: Int) -> [Event] {
-        
-    }
-    
     func updateTrackingCollection(trackingCollection: [Tracking]) {
         self.trackingCollection = trackingCollection
     }
@@ -46,10 +43,10 @@ class TrackingDataSource : TrackingDataSourceProtocol {
         
     }
     
-    func getEvent(eventID: UUID) -> Event {
+    func getEvent(eventID: UUID) -> Event? {
         let flatEventCollection : [Event] = trackingCollection.flatMap({$0.eventCollection})
         let event = flatEventCollection.first(where: {$0.eventId == eventID})
-        return event!
+        return event
     }
     
     func deleteEvent(eventID: UUID) {
@@ -70,10 +67,10 @@ class TrackingDataSource : TrackingDataSourceProtocol {
         }
     }
     
-    func updateTracking(tracking: Tracking) {
+    func updateTracking(newTracking: Tracking) {
         for tracking in trackingCollection{
-            if tracking.trackingId == tracking.trackingId{
-                tracking.editTracking(scale: tracking.scale, rating: tracking.rating, comment: tracking.comment, trackingName: tracking.trackingName, scaleName: tracking.scaleName, color: tracking.color)
+            if tracking.trackingId == newTracking.trackingId{
+                tracking.editTracking(scale: newTracking.scale, rating: newTracking.rating, comment: newTracking.comment, trackingName: newTracking.trackingName, scaleName: newTracking.scaleName, color: newTracking.color)
             }
         }
     }

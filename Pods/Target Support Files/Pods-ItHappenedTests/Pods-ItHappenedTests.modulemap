@@ -1,0 +1,6 @@
+framework module Pods_ItHappenedTests {
+  umbrella header "Pods-ItHappenedTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

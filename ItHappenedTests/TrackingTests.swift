@@ -55,7 +55,7 @@ class RatingTests: XCTestCase {
         let event1 = Event(eventId: idOfEvent1, trackingId: UUID.init(), date: Date.init(), scale: 2.5, rating: rating1! , comment: "Hello, hello")
         let event2 = Event(eventId: UUID.init(), trackingId: UUID.init(), date: Date.init(), scale: 5.9, rating: rating2! , comment: "Hello, hello")
         let listOfEvent : [Event] = [event1, event2]
-        let tracking = Tracking(scaleName: "Scale", trackingName: "JUST NEED TO SMOKK", trackingId: UUID.init(), trackingDate: Date.init(), scale: Tracking.TrackingCustomization.Required, rating: Tracking.TrackingCustomization.Required, comment: Tracking.TrackingCustomization.Required, eventCollection: listOfEvent, dateOfChange: DateFormatter.init(), isDeleted: false, color: "ffffff")
+        let tracking = Tracking(scaleName: "Scale", trackingName: "JUST NEED TO SMOKK", trackingId: UUID.init(), trackingDate: Date.init(), scale: TrackingCustomization.Required, rating: TrackingCustomization.Required, comment: TrackingCustomization.Required, eventCollection: listOfEvent, dateOfChange: DateFormatter.init(), isDeleted: false, color: "ffffff")
         return tracking
     }
     

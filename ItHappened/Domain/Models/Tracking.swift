@@ -35,11 +35,6 @@ class Tracking{
         self.color = color
     }
     //MARK: Enumerators
-    enum  TrackingCustomization {
-        case None
-        case Required
-        case Optional
-    }
     enum error : Error{
         case IllegalArgumentException(String)
     }

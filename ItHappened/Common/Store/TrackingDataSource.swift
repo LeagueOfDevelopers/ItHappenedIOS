@@ -10,7 +10,7 @@ import Foundation
 
 class TrackingDataSource : TrackingDataSourceProtocol {
     //MARK: Initialization
-    var trackingCollection : [Tracking]
+    private var trackingCollection : [Tracking]
     
     init(trackingCollection : [Tracking]){
         self.trackingCollection = trackingCollection

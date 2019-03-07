@@ -27,6 +27,10 @@
 		70B6797421A1801300C39960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B6797221A1801300C39960 /* LaunchScreen.storyboard */; };
 		70B6797F21A1801300C39960 /* ItHappenedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6797E21A1801300C39960 /* ItHappenedTests.swift */; };
 		70B6798A21A1801300C39960 /* ItHappenedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6798921A1801300C39960 /* ItHappenedUITests.swift */; };
+		70BC9CCD2231CE27007DA82C /* inglobali.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70BC9CC92231CE26007DA82C /* inglobali.ttf */; };
+		70BC9CCE2231CE27007DA82C /* inglobalb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70BC9CCA2231CE26007DA82C /* inglobalb.ttf */; };
+		70BC9CCF2231CE27007DA82C /* inglobalbi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70BC9CCB2231CE26007DA82C /* inglobalbi.ttf */; };
+		70BC9CD02231CE27007DA82C /* inglobal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70BC9CCC2231CE26007DA82C /* inglobal.ttf */; };
 		950CC766ABA55F7CB1939F9E /* Pods_ItHappenedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A874C4FB4055E80C2CA2E5F /* Pods_ItHappenedTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		70B6798521A1801300C39960 /* ItHappenedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItHappenedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B6798921A1801300C39960 /* ItHappenedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItHappenedUITests.swift; sourceTree = "<group>"; };
 		70B6798B21A1801300C39960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70BC9CC92231CE26007DA82C /* inglobali.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inglobali.ttf; sourceTree = "<group>"; };
+		70BC9CCA2231CE26007DA82C /* inglobalb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inglobalb.ttf; sourceTree = "<group>"; };
+		70BC9CCB2231CE26007DA82C /* inglobalbi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inglobalbi.ttf; sourceTree = "<group>"; };
+		70BC9CCC2231CE26007DA82C /* inglobal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = inglobal.ttf; sourceTree = "<group>"; };
 		C0604367008DAA302ADE5E97 /* Pods-ItHappenedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappenedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappenedUITests/Pods-ItHappenedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0311915E699C25EFF05D76C /* Pods-ItHappened.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappened.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappened/Pods-ItHappened.debug.xcconfig"; sourceTree = "<group>"; };
 		D7AFCA5073F2DA6DB9814BFF /* Pods-ItHappenedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappenedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappenedTests/Pods-ItHappenedTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 		7063F28021BAA300005E657D /* Recources */ = {
 			isa = PBXGroup;
 			children = (
+				70BC9CC82231CE26007DA82C /* inglobal */,
 				70B6796D21A1801200C39960 /* Main.storyboard */,
 				70B6797221A1801300C39960 /* LaunchScreen.storyboard */,
 				70B6797021A1801300C39960 /* Assets.xcassets */,
@@ -223,6 +232,18 @@
 			path = ItHappenedUITests;
 			sourceTree = "<group>";
 		};
+		70BC9CC82231CE26007DA82C /* inglobal */ = {
+			isa = PBXGroup;
+			children = (
+				70BC9CC92231CE26007DA82C /* inglobali.ttf */,
+				70BC9CCA2231CE26007DA82C /* inglobalb.ttf */,
+				70BC9CCB2231CE26007DA82C /* inglobalbi.ttf */,
+				70BC9CCC2231CE26007DA82C /* inglobal.ttf */,
+			);
+			name = inglobal;
+			path = ../../../TestDesignItHappened/CollectionViewAddHeader/Addons/inglobal;
+			sourceTree = "<group>";
+		};
 		7A62030521C7CB1DCD7F7FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +278,6 @@
 				70B6796221A1801200C39960 /* Sources */,
 				70B6796321A1801200C39960 /* Frameworks */,
 				70B6796421A1801200C39960 /* Resources */,
-				3F268535E8C9FF8FF001407F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,8 +374,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BC9CCE2231CE27007DA82C /* inglobalb.ttf in Resources */,
 				70B6797421A1801300C39960 /* LaunchScreen.storyboard in Resources */,
 				70B6797121A1801300C39960 /* Assets.xcassets in Resources */,
+				70BC9CCF2231CE27007DA82C /* inglobalbi.ttf in Resources */,
+				70BC9CCD2231CE27007DA82C /* inglobali.ttf in Resources */,
+				70BC9CD02231CE27007DA82C /* inglobal.ttf in Resources */,
 				70B6796F21A1801200C39960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,28 +401,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F268535E8C9FF8FF001407F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ItHappened/Pods-ItHappened-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Segmentio.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ItHappened/Pods-ItHappened-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		81B9A645B0EEA3F9FBD02670 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

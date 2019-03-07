@@ -1,13 +1,22 @@
-# Podfile
-use_frameworks!
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
 target 'ItHappened' do
-    pod 'RxSwift',    '~> 4.0'
-    pod 'RxCocoa',    '~> 4.0'
-end
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks! 
 
-# RxTest and RxBlocking make the most sense in the context of unit/integration tests
-target 'ItHappenedTests' do
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
+  pod 'Segmentio', '~> 3.3'
+
+  # Pods for ItHappened
+
+  target 'ItHappenedTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ItHappenedUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end

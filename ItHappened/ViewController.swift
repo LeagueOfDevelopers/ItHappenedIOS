@@ -33,7 +33,13 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         flowLayout.minimumLineSpacing = 0
         view.addSubview(fab)
 
+        fab.addTarget(self, action: #selector(goToAddTracking(_:)), for: .touchUpInside)
         //        collectionView.register(CustomCollectionCell.self, forCellWithReuseIdentifier: "cellId")
+    }
+    
+    @objc func goToAddTracking(_ sender: UIButton){
+        let addTracking = storyboard?.instantiateViewController(withIdentifier: "addTracking")
+        present(addTracking!, animated: true, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

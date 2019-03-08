@@ -11,7 +11,18 @@ import UIKit
 class addTracking: UIViewController {
     @IBOutlet var backButton: UIButton!
     @IBOutlet var createButton: UIButton!
-    @IBOutlet var ratingSC: UISegmentedControl!
+    @IBAction func ratingSC(_ sender: CustomSegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("Selected 1 item")
+        case 1:
+            print("Selected 2 item")
+        case 2:
+            print("Selected 3 item")
+        default:
+            print("Default action")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

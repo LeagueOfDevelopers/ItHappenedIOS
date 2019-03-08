@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -386,7 +387,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ETp-Pn-Di6">
                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
-                                                <color key="backgroundColor" red="0.69590264560000004" green="0.40834546090000001" blue="0.2458741069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="green"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Part of uncircle" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-ta-mKg">
                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
@@ -457,43 +458,63 @@
                                                     <constraint firstAttribute="height" constant="175" id="oJQ-wd-qMR"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqo-3J-TnH">
-                                                <rect key="frame" x="62" y="0.0" width="105" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqo-3J-TnH">
+                                                <rect key="frame" x="62" y="0.0" width="98" height="32"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-UA-W0d">
-                                                <rect key="frame" x="62" y="40" width="33" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Нет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBE-UA-W0d">
+                                                <rect key="frame" x="62" y="40" width="31" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="18"/>
                                                 <color key="textColor" red="0.49521344900131226" green="0.099865786731243134" blue="0.45609986782073975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-Ja-7on">
-                                                <rect key="frame" x="62" y="84.5" width="265" height="41"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkX-di-5Mx" customClass="CustomSegmentedControl" customModule="ItHappened" customModuleProvider="target">
+                                                <rect key="frame" x="62" y="79" width="265" height="41"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="M15-6f-AZ0"/>
-                                                    <constraint firstAttribute="width" constant="265" id="nYI-61-njp"/>
+                                                    <constraint firstAttribute="width" constant="265" id="C1W-Tn-WkL"/>
+                                                    <constraint firstAttribute="height" constant="41" id="EMQ-Hg-PDn"/>
                                                 </constraints>
-                                                <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title=""/>
-                                                </segments>
-                                            </segmentedControl>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonTitles" value=" ╳, ✓,✓✓"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="green"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                        <color key="value" name="green"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ratingSC:" destination="d1X-gU-GUk" eventType="valueChanged" id="S9f-al-Dh3"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Fqo-3J-TnH" firstAttribute="top" secondItem="xpu-1S-cPb" secondAttribute="top" id="0vy-Fh-DI1"/>
                                             <constraint firstItem="xpu-1S-cPb" firstAttribute="top" secondItem="kd5-Y9-D3C" secondAttribute="top" id="3YW-xT-FP9"/>
+                                            <constraint firstAttribute="bottom" secondItem="hkX-di-5Mx" secondAttribute="bottom" constant="55" id="7SL-d4-OxU"/>
                                             <constraint firstItem="Fqo-3J-TnH" firstAttribute="leading" secondItem="kd5-Y9-D3C" secondAttribute="leading" constant="62" id="9s6-te-cZV"/>
                                             <constraint firstItem="GBE-UA-W0d" firstAttribute="top" secondItem="Fqo-3J-TnH" secondAttribute="bottom" constant="8" symbolic="YES" id="B5T-jr-5Og"/>
                                             <constraint firstItem="Fqo-3J-TnH" firstAttribute="leading" secondItem="GBE-UA-W0d" secondAttribute="leading" id="Ldf-F9-zsj"/>
                                             <constraint firstAttribute="trailing" secondItem="xpu-1S-cPb" secondAttribute="trailing" id="UBS-jG-PHU"/>
-                                            <constraint firstItem="sNB-Ja-7on" firstAttribute="leading" secondItem="kd5-Y9-D3C" secondAttribute="leading" constant="62" id="Z9T-72-KPb"/>
-                                            <constraint firstItem="sNB-Ja-7on" firstAttribute="top" secondItem="GBE-UA-W0d" secondAttribute="bottom" constant="22.5" id="c9Z-tj-Qdg"/>
+                                            <constraint firstItem="hkX-di-5Mx" firstAttribute="leading" secondItem="kd5-Y9-D3C" secondAttribute="leading" constant="62" id="WXT-ZW-Oct"/>
+                                            <constraint firstAttribute="trailing" secondItem="hkX-di-5Mx" secondAttribute="trailing" constant="48" id="YdF-Gz-qya"/>
+                                            <constraint firstItem="hkX-di-5Mx" firstAttribute="top" secondItem="GBE-UA-W0d" secondAttribute="bottom" constant="18" id="Ygm-rd-aDm"/>
                                             <constraint firstItem="xpu-1S-cPb" firstAttribute="leading" secondItem="kd5-Y9-D3C" secondAttribute="leading" id="veP-H5-kxy"/>
                                             <constraint firstAttribute="bottom" secondItem="xpu-1S-cPb" secondAttribute="bottom" id="vfE-N8-3Ie"/>
+                                            <constraint firstItem="hkX-di-5Mx" firstAttribute="leading" secondItem="GBE-UA-W0d" secondAttribute="leading" id="y5M-n0-ayL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzz-aC-cJh">
@@ -507,19 +528,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mba-XD-j9f">
-                                                <rect key="frame" x="62" y="0.0" width="178" height="32"/>
+                                                <rect key="frame" x="62" y="0.0" width="167.5" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePy-TP-3Vg">
-                                                <rect key="frame" x="62" y="40" width="33" height="22"/>
+                                                <rect key="frame" x="62" y="38.5" width="31" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="18"/>
                                                 <color key="textColor" red="0.49521344900000003" green="0.099865786730000003" blue="0.4560998678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ouL-GH-JSs">
-                                                <rect key="frame" x="62" y="84.5" width="265" height="41"/>
+                                                <rect key="frame" x="62" y="82" width="265" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Ixb-Ol-byp"/>
                                                     <constraint firstAttribute="width" constant="265" id="up6-4c-JBy"/>
@@ -557,19 +578,19 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шкала" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48N-xi-ywv">
-                                                <rect key="frame" x="62" y="0.5" width="84" height="32"/>
+                                                <rect key="frame" x="62" y="4" width="83" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5x-eS-Hif">
-                                                <rect key="frame" x="62" y="40.5" width="33" height="22"/>
+                                                <rect key="frame" x="62" y="42.5" width="31" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="18"/>
                                                 <color key="textColor" red="0.49521344900000003" green="0.099865786730000003" blue="0.4560998678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f5x-GL-uBY">
-                                                <rect key="frame" x="62" y="85" width="265" height="41"/>
+                                                <rect key="frame" x="62" y="86" width="265" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="265" id="Qln-OH-LDh"/>
                                                     <constraint firstAttribute="height" constant="40" id="uMG-0D-9oK"/>
@@ -587,7 +608,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Единица измерения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcK-nc-ijk">
-                                                <rect key="frame" x="62" y="142" width="183" height="22"/>
+                                                <rect key="frame" x="62" y="143" width="173.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="18"/>
                                                 <color key="textColor" red="0.49521344900000003" green="0.099865786730000003" blue="0.4560998678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -628,7 +649,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цвет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9r-tQ-fwf">
-                                                <rect key="frame" x="62" y="0.0" width="62" height="32"/>
+                                                <rect key="frame" x="62" y="0.0" width="59" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -693,12 +714,51 @@
                     <connections>
                         <outlet property="backButton" destination="1RQ-iz-gW0" id="2Og-fv-xAg"/>
                         <outlet property="createButton" destination="VSP-0t-elW" id="NXv-i7-n99"/>
-                        <outlet property="ratingSC" destination="sNB-Ja-7on" id="9Jp-xW-7H6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kam-rm-iMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.399999999999999" y="-161.91904047976013"/>
+            <point key="canvasLocation" x="-74" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T6j-y2-Vfe">
+            <objects>
+                <viewController id="WAp-dQ-ogc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzJ-S4-ahO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzC-dl-8Vy" customClass="CustomSegmentedControl" customModule="ItHappened" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonTitles" value="no,maybe,yes"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" name="green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="green"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" name="green"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tpd-dS-nTw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ove-Q3-rfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-162"/>
         </scene>
     </scenes>
     <resources>
@@ -712,5 +772,8 @@
         <image name="main" width="60" height="60"/>
         <image name="star" width="16" height="16"/>
         <image name="stat" width="60" height="60"/>
+        <namedColor name="green">
+            <color red="0.10588235294117647" green="0.36862745098039218" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

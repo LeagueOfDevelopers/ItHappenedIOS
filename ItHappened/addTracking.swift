@@ -11,6 +11,9 @@ import UIKit
 class addTracking: UIViewController {
     @IBOutlet var backButton: UIButton!
     @IBOutlet var createButton: UIButton!
+    @IBOutlet var inputAmount: UITextField!
+    @IBOutlet var nameTrackingView: UITextField!
+    @IBOutlet var colorsCollectionView: UICollectionView!
     @IBAction func ratingSC(_ sender: CustomSegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -27,15 +30,40 @@ class addTracking: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.addTarget(self, action: #selector(goToMainScreen(_:)), for: .touchUpInside)
-        createButton.layer.cornerRadius = createButton.frame.height/2
-        
+        createButton.layer.cornerRadius = createButton.frame.height / 2
+        colorsCollectionView.delegate = self as! UICollectionViewDelegate
+        colorsCollectionView.dataSource = self as! UICollectionViewDataSource
+        nameTrackingView.layer.shadowColor = UIColor.black.cgColor
+        nameTrackingView.layer.shadowOpacity = 10
+        nameTrackingView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        nameTrackingView.layer.shadowRadius = 10
+        inputAmount.layer.cornerRadius = inputAmount.frame.height / 2
+        inputAmount.layer.masksToBounds = true
+        inputAmount.layer.borderWidth = 1
+        inputAmount.layer.borderColor = UIColor.lightGray.cgColor
         // Do any additional setup after loading the view.
     }
     
     @objc func goToMainScreen(_ sender: UIButton){
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+}
 
 
-
+extension addTracking: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "color", for: indexPath)
+        cell.backgroundColor = .red
+        cell.layer.cornerRadius = cell.frame.height / 2
+        return cell
+    }
+    
+    
 }

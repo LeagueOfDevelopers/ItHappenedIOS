@@ -15,6 +15,7 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
 //        collectionView.isPagingEnabled = true
         let flowLayout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.minimumLineSpacing = 0
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,6 +42,11 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
         return cell!
     }
     
+    func scrollMenuAtIndex(menuIndex: Int){
+        let indexPath = NSIndexPath(item: menuIndex, section: 0)
+        collectionView.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
@@ -48,7 +54,23 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
 }
 
 extension AddTrackingCollectionViewController: YourCellDelegate {
+    func goToNextStep(step: Int) {
+        scrollMenuAtIndex(menuIndex: step)
+    }
     func didCompleteOnboarding() {
         self.dismiss(animated: true, completion: nil)
     }
 }
+
+extension AddTrackingCollectionViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddTrackingCollectionViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+

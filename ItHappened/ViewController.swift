@@ -21,9 +21,10 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         return button
     }()
     
-    
-    
     @IBOutlet var collectionView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self as UICollectionViewDelegate

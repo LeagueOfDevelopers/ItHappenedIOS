@@ -17,9 +17,9 @@ class CommentCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backButton.addTarget(self, action: #selector(dismissVC(_:)), for: .touchUpInside)
-        doneButton.addTarget(self, action: #selector(nextStep(_:)), for: .touchUpInside)
-        doneButton.layer.cornerRadius = doneButton.frame.height / 2
+//        backButton.addTarget(self, action: #selector(dismissVC(_:)), for: .touchUpInside)
+//        doneButton.addTarget(self, action: #selector(nextStep(_:)), for: .touchUpInside)
+//        doneButton.layer.cornerRadius = doneButton.frame.height / 2
     }
     @objc func dismissVC(_ sender: UIButton){
         delegate!.didCompleteOnboarding()

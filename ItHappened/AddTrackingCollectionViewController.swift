@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class AddTrackingCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
@@ -15,7 +16,7 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
 //        collectionView.isPagingEnabled = true
         let flowLayout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.minimumLineSpacing = 0
-        self.hideKeyboardWhenTappedAround()
+        IQKeyboardManager.shared.enable = false
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,18 +60,6 @@ extension AddTrackingCollectionViewController: YourCellDelegate {
     }
     func didCompleteOnboarding() {
         self.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension AddTrackingCollectionViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddTrackingCollectionViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 

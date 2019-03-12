@@ -251,7 +251,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="comment" reuseIdentifier="comment" id="cL3-ca-OI9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="comment" reuseIdentifier="comment" id="cL3-ca-OI9" customClass="CommentCollectionViewCell" customModule="ItHappened" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -370,6 +370,10 @@
                                             <constraint firstAttribute="bottom" secondItem="S5s-sj-K0S" secondAttribute="bottom" id="rA0-4o-lhC"/>
                                         </constraints>
                                         <size key="customSize" width="414" height="818"/>
+                                        <connections>
+                                            <outlet property="backButton" destination="qqh-ps-orK" id="qD2-4Z-aAC"/>
+                                            <outlet property="doneButton" destination="cpf-WT-yW0" id="cvI-68-8Cy"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="rating" id="yXC-tN-XWL">
                                         <rect key="frame" x="424" y="0.0" width="414" height="818"/>

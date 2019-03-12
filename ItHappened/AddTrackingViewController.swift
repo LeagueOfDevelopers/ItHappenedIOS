@@ -10,7 +10,6 @@ import UIKit
 
 class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     @IBOutlet var collectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self as UICollectionViewDelegate
@@ -43,12 +42,27 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath)
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath)
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath) as? CommentCollectionViewCell
+        cell?.delegate = self
+        return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
+    func scrollMenuAtIndex(menuIndex: Int){
+        let indexPath = NSIndexPath(item: menuIndex, section: 0)
+        collectionView.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
+    }
+    
+}
+
+extension AddTrackingViewController: YourCellDelegate {
+    func goToNextStep(step: Int) {
+        scrollMenuAtIndex(menuIndex: step)
+    }
+    func didCompleteOnboarding() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

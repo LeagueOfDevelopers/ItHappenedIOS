@@ -16,7 +16,6 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
 //        collectionView.isPagingEnabled = true
         let flowLayout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.minimumLineSpacing = 0
-        IQKeyboardManager.shared.enable = false
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

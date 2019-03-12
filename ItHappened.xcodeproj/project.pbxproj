@@ -213,11 +213,11 @@
 				7099AC7E21AAC9D4005A8E8B /* Domain */,
 				70B6796B21A1801200C39960 /* ViewController.swift */,
 				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
+				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
 				70F3472B223481470075EAA9 /* MainViewController.swift */,
 				70B6797521A1801300C39960 /* Info.plist */,
 				7063F28A21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift */,
 				70F3472D2234819C0075EAA9 /* TrackingTableViewCell.swift */,
-				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
 				70F347322235970A0075EAA9 /* AddTrackingCollectionViewController.swift */,
 			);
 			path = ItHappened;

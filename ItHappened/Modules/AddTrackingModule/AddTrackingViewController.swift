@@ -22,8 +22,6 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
     
 }
 
-
-
 extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
@@ -31,8 +29,9 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath)
-            return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath) as? RatingCollectionViewCell
+            cell?.delegate = self
+            return cell!
         }
         if indexPath.item == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scale", for: indexPath)
@@ -58,8 +57,8 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
     
 }
 
-extension AddTrackingViewController: YourCellDelegate {
-    func goToNextStep(step: Int) {
+extension AddTrackingViewController: CellDelegate {
+    func goToStep(step: Int) {
         scrollMenuAtIndex(menuIndex: step)
     }
     func didCompleteOnboarding() {

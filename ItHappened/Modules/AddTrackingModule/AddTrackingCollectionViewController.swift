@@ -53,8 +53,8 @@ class AddTrackingCollectionViewController: UICollectionViewController, UICollect
 
 }
 
-extension AddTrackingCollectionViewController: YourCellDelegate {
-    func goToNextStep(step: Int) {
+extension AddTrackingCollectionViewController: CellDelegate {
+    func goToStep(step: Int) {
         scrollMenuAtIndex(menuIndex: step)
     }
     func didCompleteOnboarding() {

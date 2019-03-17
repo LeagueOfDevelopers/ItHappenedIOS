@@ -29,12 +29,9 @@
 		70B6797421A1801300C39960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B6797221A1801300C39960 /* LaunchScreen.storyboard */; };
 		70B6797F21A1801300C39960 /* ItHappenedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6797E21A1801300C39960 /* ItHappenedTests.swift */; };
 		70B6798A21A1801300C39960 /* ItHappenedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6798921A1801300C39960 /* ItHappenedUITests.swift */; };
-		70BC9D572232C90A007DA82C /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC9D562232C90A007DA82C /* CustomSegmentedControl.swift */; };
 		70F3472C223481470075EAA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3472B223481470075EAA9 /* MainViewController.swift */; };
 		70F3472E2234819C0075EAA9 /* TrackingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3472D2234819C0075EAA9 /* TrackingTableViewCell.swift */; };
-		70F347332235970A0075EAA9 /* AddTrackingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F347322235970A0075EAA9 /* AddTrackingCollectionViewController.swift */; };
 		70F347352235A6110075EAA9 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */; };
-		70FE3AF8223C175200EBAE9C /* CellDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE3AF7223C175200EBAE9C /* CellDelegateProtocol.swift */; };
 		950CC766ABA55F7CB1939F9E /* Pods_ItHappenedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A874C4FB4055E80C2CA2E5F /* Pods_ItHappenedTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,14 +84,12 @@
 		70B6798521A1801300C39960 /* ItHappenedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItHappenedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B6798921A1801300C39960 /* ItHappenedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItHappenedUITests.swift; sourceTree = "<group>"; };
 		70B6798B21A1801300C39960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70BC9D562232C90A007DA82C /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		70C51CF0223EE3D60097CB46 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		70F34727223478120075EAA9 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		70F3472822347E630075EAA9 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		70F3472B223481470075EAA9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		70F3472D2234819C0075EAA9 /* TrackingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTableViewCell.swift; sourceTree = "<group>"; };
-		70F347322235970A0075EAA9 /* AddTrackingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingCollectionViewController.swift; sourceTree = "<group>"; };
 		70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
-		70FE3AF7223C175200EBAE9C /* CellDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDelegateProtocol.swift; sourceTree = "<group>"; };
 		C0604367008DAA302ADE5E97 /* Pods-ItHappenedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappenedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappenedUITests/Pods-ItHappenedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0311915E699C25EFF05D76C /* Pods-ItHappened.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappened.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappened/Pods-ItHappened.debug.xcconfig"; sourceTree = "<group>"; };
 		D7AFCA5073F2DA6DB9814BFF /* Pods-ItHappenedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItHappenedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ItHappenedTests/Pods-ItHappenedTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,7 +148,6 @@
 				70B6796D21A1801200C39960 /* Main.storyboard */,
 				70B6797221A1801300C39960 /* LaunchScreen.storyboard */,
 				70B6797021A1801300C39960 /* Assets.xcassets */,
-				70BC9D562232C90A007DA82C /* CustomSegmentedControl.swift */,
 			);
 			path = Recources;
 			sourceTree = "<group>";
@@ -247,6 +241,7 @@
 		70BC9DDB2232ECC3007DA82C /* SanFrancisco */ = {
 			isa = PBXGroup;
 			children = (
+				70C51CF0223EE3D60097CB46 /* SF-Pro-Text-Medium.otf */,
 				70F34727223478120075EAA9 /* SF-Pro-Text-Semibold.otf */,
 				70F3472822347E630075EAA9 /* SF-Pro-Text-Regular.otf */,
 			);
@@ -274,11 +269,9 @@
 		70FE3AF6223C170600EBAE9C /* AddTrackingModule */ = {
 			isa = PBXGroup;
 			children = (
-				70F347322235970A0075EAA9 /* AddTrackingCollectionViewController.swift */,
 				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
 				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
 				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
-				70FE3AF7223C175200EBAE9C /* CellDelegateProtocol.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -538,7 +531,6 @@
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */,
 				70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */,
-				70FE3AF8223C175200EBAE9C /* CellDelegateProtocol.swift in Sources */,
 				70B6796C21A1801200C39960 /* ViewController.swift in Sources */,
 				7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */,
 				70F347352235A6110075EAA9 /* CommentCollectionViewCell.swift in Sources */,
@@ -547,8 +539,6 @@
 				7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */,
 				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,
-				70F347332235970A0075EAA9 /* AddTrackingCollectionViewController.swift in Sources */,
-				70BC9D572232C90A007DA82C /* CustomSegmentedControl.swift in Sources */,
 				7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

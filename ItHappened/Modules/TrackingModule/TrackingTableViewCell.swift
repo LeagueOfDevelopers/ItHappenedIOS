@@ -15,4 +15,8 @@ class TrackingTableViewCell: UITableViewCell {
     @IBOutlet var date: UILabel!
     @IBOutlet var comment: UILabel!
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
 }

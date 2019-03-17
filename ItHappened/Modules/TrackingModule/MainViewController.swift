@@ -19,8 +19,17 @@ class MainViewController: UIViewController {
     let heightForCell = 98
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNeedsStatusBarAppearanceUpdate()
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
     
     let colors = ["blue", "pink", "yellow", "green", "violet","blue", "pink", "yellow", "green", "violet"]

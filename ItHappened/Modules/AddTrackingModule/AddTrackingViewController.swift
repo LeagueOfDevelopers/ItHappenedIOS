@@ -1,20 +1,63 @@
-//
-//  AddTrackingViewController.swift
-//  ItHappened
-//
-//  Created by Victor on 12/03/2019.
-//  Copyright © 2019 com.example.LoD. All rights reserved.
-//
-
 import UIKit
 
 class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+    private var index = 0
+    private let numberOfItemsSections = 5
+    @IBOutlet var nextLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var doneLabel: UILabel!
+    @IBOutlet var nextImageView: UIImageView!
+    @IBAction func dismissButtonAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func previousButtonAction(_ sender: Any) {
+        index -= 1
+        if index >= 0{
+            scrollMenuAtIndex(menuIndex: index)
+            pageController.currentPage = index
+        }
+        if index > 0{
+            previousButton.isHidden = false
+        }
+        else{
+            previousButton.isHidden = true
+        }
+    }
+    @IBOutlet var previousButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var pageController: UIPageControl!
+    @IBAction func actionToPrint(_ sender: Any) {
+        index += 1
+        if index < numberOfItemsSections {
+            scrollMenuAtIndex(menuIndex: index)
+            pageController.currentPage = index
+        }
+        if index > 0{
+            previousButton.isHidden = false
+        }
+        else{
+            previousButton.isHidden = true
+        }
+        if index == 4{
+            UIView.animate(withDuration: 0.3) {
+                self.doneLabel.isHidden.toggle()
+                self.pageController.isHidden.toggle()
+                self.nextLabel.isHidden.toggle()
+                self.nextImageView.isHidden.toggle()
+            }
+        }
+        if index > 4{
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self as UICollectionViewDataSource
         collectionView.isPagingEnabled = true
+        nextButton.layer.cornerRadius = nextButton.frame.height / 2
         let flowLayout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.minimumLineSpacing = 0
 
@@ -24,26 +67,28 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
 
 extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return numberOfItemsSections
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath) as? RatingCollectionViewCell
-            cell?.delegate = self
-            return cell!
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath)
+            return cell
         }
         if indexPath.item == 2{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scale", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath)
             return cell
         }
         if indexPath.item == 3{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scale", for: indexPath)
+            return cell
+        }
+        if indexPath.item == 4{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath)
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath) as? CommentCollectionViewCell
-        cell?.delegate = self
-        return cell!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath)
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -55,13 +100,4 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
         collectionView.scrollToItem(at: indexPath as IndexPath, at: [], animated: true)
     }
     
-}
-
-extension AddTrackingViewController: CellDelegate {
-    func goToStep(step: Int) {
-        scrollMenuAtIndex(menuIndex: step)
-    }
-    func didCompleteOnboarding() {
-        self.dismiss(animated: true, completion: nil)
-    }
 }

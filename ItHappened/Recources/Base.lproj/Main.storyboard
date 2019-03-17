@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Аккаунт-->
         <scene sceneID="xE5-Z2-CFZ">
             <objects>
                 <viewController id="4qL-ex-Yw4" sceneMemberID="viewController">
@@ -29,13 +29,13 @@
                         <color key="backgroundColor" name="pink"/>
                         <viewLayoutGuide key="safeArea" id="si5-el-VWj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="y4j-yT-voT"/>
+                    <tabBarItem key="tabBarItem" title="Аккаунт" image="profile1" selectedImage="profile1" id="y4j-yT-voT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKa-Ws-pdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217" y="-1807"/>
         </scene>
-        <!--View Controller-->
+        <!--Статистика-->
         <scene sceneID="gG0-7k-21K">
             <objects>
                 <viewController id="Gbb-aX-LpQ" sceneMemberID="viewController">
@@ -45,13 +45,13 @@
                         <color key="backgroundColor" name="blue"/>
                         <viewLayoutGuide key="safeArea" id="jWu-wa-Ir8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="9z0-1Z-Uec"/>
+                    <tabBarItem key="tabBarItem" title="Статистика" image="statistics" selectedImage="statistics" id="9z0-1Z-Uec"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnK-Hf-avX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217" y="-928"/>
         </scene>
-        <!--View Controller-->
+        <!--История-->
         <scene sceneID="ez0-xQ-tVK">
             <objects>
                 <viewController id="vJD-mq-LzN" sceneMemberID="viewController">
@@ -61,13 +61,13 @@
                         <color key="backgroundColor" name="yellow"/>
                         <viewLayoutGuide key="safeArea" id="gQN-UP-oED"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="X3F-VB-ccl"/>
+                    <tabBarItem key="tabBarItem" title="История" image="history" selectedImage="history" id="X3F-VB-ccl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pw7-WF-wRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-217" y="-50"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Мои отслеживания-->
         <scene sceneID="4b6-Et-O0f">
             <objects>
                 <viewController id="4t3-zz-JtL" customClass="MainViewController" customModule="ItHappened" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,55 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFh-ck-t3g">
-                                <rect key="frame" x="0.0" y="44" width="414" height="66"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSn-nJ-eVZ">
-                                        <rect key="frame" x="20" y="20" width="30" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="h25-bD-Wja"/>
-                                            <constraint firstAttribute="width" constant="30" id="yht-wd-W9V"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="syncButton"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои отслеживания" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDN-Jw-KUe">
-                                        <rect key="frame" x="58" y="20" width="303" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="9Pc-zg-QmH"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="303" id="ux7-ja-Ig0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5V-zY-Wkl">
-                                        <rect key="frame" x="369" y="20" width="26" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="DIc-c8-iqw"/>
-                                            <constraint firstAttribute="width" constant="26" id="QC6-tk-6Gw"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="addTrackingButton"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="UDN-Jw-KUe" secondAttribute="bottom" constant="20" id="5oT-xM-Dy1"/>
-                                    <constraint firstItem="JSn-nJ-eVZ" firstAttribute="top" secondItem="MFh-ck-t3g" secondAttribute="top" constant="20" id="DP4-vt-Isk"/>
-                                    <constraint firstAttribute="trailing" secondItem="L5V-zY-Wkl" secondAttribute="trailing" constant="19" id="DiW-HC-T2G"/>
-                                    <constraint firstItem="UDN-Jw-KUe" firstAttribute="top" secondItem="L5V-zY-Wkl" secondAttribute="top" id="HVR-pD-w4P"/>
-                                    <constraint firstItem="UDN-Jw-KUe" firstAttribute="top" secondItem="JSn-nJ-eVZ" secondAttribute="top" id="Mqx-EJ-tjc"/>
-                                    <constraint firstItem="UDN-Jw-KUe" firstAttribute="leading" secondItem="JSn-nJ-eVZ" secondAttribute="trailing" constant="8" id="OFy-m0-u0V"/>
-                                    <constraint firstItem="L5V-zY-Wkl" firstAttribute="leading" secondItem="UDN-Jw-KUe" secondAttribute="trailing" constant="8" id="Prw-Cg-Pgx"/>
-                                    <constraint firstItem="UDN-Jw-KUe" firstAttribute="top" secondItem="MFh-ck-t3g" secondAttribute="top" constant="20" id="Q18-MU-y2P"/>
-                                    <constraint firstAttribute="bottom" secondItem="L5V-zY-Wkl" secondAttribute="bottom" constant="20" id="RcN-6e-DAS"/>
-                                    <constraint firstItem="JSn-nJ-eVZ" firstAttribute="leading" secondItem="MFh-ck-t3g" secondAttribute="leading" constant="20" id="SAS-AS-FPE"/>
-                                    <constraint firstAttribute="bottom" secondItem="JSn-nJ-eVZ" secondAttribute="bottom" constant="20" id="aW1-mZ-4uv"/>
-                                    <constraint firstItem="L5V-zY-Wkl" firstAttribute="top" secondItem="MFh-ck-t3g" secondAttribute="top" constant="20" id="mLx-3K-ovV"/>
-                                    <constraint firstAttribute="height" constant="66" id="nhe-Af-ZSV"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-4q-Y5w">
-                                <rect key="frame" x="0.0" y="107" width="414" height="706"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackingCell" rowHeight="98" id="yad-Jg-TF2" userLabel="trackingCell" customClass="TrackingTableViewCell" customModule="ItHappened" customModuleProvider="target">
@@ -212,26 +165,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EX4-WG-g7K" firstAttribute="bottom" secondItem="fbe-4q-Y5w" secondAttribute="bottom" id="1vc-aD-xF2"/>
-                            <constraint firstItem="MFh-ck-t3g" firstAttribute="top" secondItem="EX4-WG-g7K" secondAttribute="top" id="Na8-X2-NKL"/>
-                            <constraint firstItem="fbe-4q-Y5w" firstAttribute="top" secondItem="EX4-WG-g7K" secondAttribute="top" constant="63" id="V1u-xK-a7Q"/>
+                            <constraint firstItem="fbe-4q-Y5w" firstAttribute="top" secondItem="EX4-WG-g7K" secondAttribute="top" id="V1u-xK-a7Q"/>
                             <constraint firstItem="fbe-4q-Y5w" firstAttribute="trailing" secondItem="EX4-WG-g7K" secondAttribute="trailing" id="dD4-PV-04d"/>
                             <constraint firstItem="fbe-4q-Y5w" firstAttribute="leading" secondItem="EX4-WG-g7K" secondAttribute="leading" id="p6H-f2-ePc"/>
-                            <constraint firstItem="MFh-ck-t3g" firstAttribute="leading" secondItem="EX4-WG-g7K" secondAttribute="leading" id="rJ3-Cb-dLI"/>
-                            <constraint firstItem="MFh-ck-t3g" firstAttribute="trailing" secondItem="EX4-WG-g7K" secondAttribute="trailing" id="ySw-pt-G5X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EX4-WG-g7K"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="oRQ-Po-jCx">
-                        <color key="badgeColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Мои отслеживания" id="VNq-gX-jEs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="syncButton" id="ETj-MK-1d0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="addTrackingButton" id="DNE-Iq-X6O">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addNewTracking:" destination="4t3-zz-JtL" id="8mq-D3-y3H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="addNewTrackingbutton" destination="L5V-zY-Wkl" id="cyA-gX-Fjr"/>
                         <outlet property="tableView" destination="fbe-4q-Y5w" id="Piw-8g-oiY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcY-02-BTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217.39130434782609" y="860.49107142857144"/>
+            <point key="canvasLocation" x="692.75362318840587" y="860.49107142857144"/>
         </scene>
         <!--Add Tracking View Controller-->
         <scene sceneID="WT2-lA-oZQ">
@@ -613,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5d4-ZY-ims" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618.84057971014499" y="859.82142857142856"/>
+            <point key="canvasLocation" x="1528.985507246377" y="859.82142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tRZ-Lb-lxY">
@@ -627,7 +584,7 @@
                         <color key="selectedImageTintColor" red="0.15686274509803921" green="0.75294117647058822" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4t3-zz-JtL" kind="relationship" relationship="viewControllers" id="92u-43-uDW"/>
+                        <segue destination="pPg-5w-uzn" kind="relationship" relationship="viewControllers" id="92u-43-uDW"/>
                         <segue destination="vJD-mq-LzN" kind="relationship" relationship="viewControllers" id="xmT-IO-URt"/>
                         <segue destination="Gbb-aX-LpQ" kind="relationship" relationship="viewControllers" id="0WI-Zi-vTk"/>
                         <segue destination="4qL-ex-Yw4" kind="relationship" relationship="viewControllers" id="HH3-y5-nlQ"/>
@@ -637,13 +594,45 @@
             </objects>
             <point key="canvasLocation" x="-1467" y="-406"/>
         </scene>
+        <!--Главная-->
+        <scene sceneID="Odx-wP-uJx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pPg-5w-uzn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Главная" image="home" selectedImage="home" id="oRQ-Po-jCx">
+                        <color key="badgeColor" red="0.15686274510000001" green="0.75294117650000003" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GbY-0x-IZh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.75294117650000003" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4t3-zz-JtL" kind="relationship" relationship="rootViewController" id="wZz-If-cUW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZC-CV-DFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217.39130434782609" y="860.49107142857144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="addTrackingButton" width="25" height="25"/>
         <image name="backButton" width="39" height="39"/>
         <image name="comment" width="99" height="99"/>
         <image name="dismiss" width="39" height="39"/>
+        <image name="history" width="25" height="25"/>
+        <image name="home" width="25" height="25"/>
+        <image name="profile1" width="25" height="25"/>
         <image name="rating" width="99" height="99"/>
+        <image name="statistics" width="25" height="25"/>
         <image name="syncButton" width="28" height="26"/>
         <namedColor name="blue">
             <color red="0.16078431372549021" green="0.52941176470588236" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,11 +1,3 @@
-//
-//  CustomSegmentedControl.swift
-//  ItHappened
-//
-//  Created by Victor on 08/03/2019.
-//  Copyright © 2019 com.example.LoD. All rights reserved.
-//
-
 import UIKit
 
 @IBDesignable

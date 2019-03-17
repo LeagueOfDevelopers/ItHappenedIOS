@@ -10,22 +10,21 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var addNewTrackingbutton: UIButton!
+    @IBAction func addNewTracking(_ sender: Any) {
+        let addTrackingViewController = storyboard?.instantiateViewController(withIdentifier: "addTrackingVC")
+        self.present(addTrackingViewController!, animated: true)
+    }
+    
+
     let heightForCell = 98
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
-        addNewTrackingbutton.addTarget(self, action: #selector(goToAddTracking(_:)), for: .touchUpInside)
     }
     
     let colors = ["blue", "pink", "yellow", "green", "violet","blue", "pink", "yellow", "green", "violet"]
 
-    @objc func goToAddTracking(_ sender: UIButton){
-        let addTrackingViewController = storyboard?.instantiateViewController(withIdentifier: "addTrackingVC")
-        self.present(addTrackingViewController!, animated: true)
-    }
-    
 }
 
 

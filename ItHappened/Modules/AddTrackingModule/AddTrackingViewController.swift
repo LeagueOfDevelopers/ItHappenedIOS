@@ -22,6 +22,13 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
         else{
             previousButton.isHidden = true
         }
+        if index == 3{
+            self.doneLabel.isHidden = true
+            self.pageController.isHidden = false
+            self.nextLabel.isHidden = false
+            self.nextImageView.isHidden = false
+        }
+        
     }
     @IBOutlet var previousButton: UIButton!
     @IBOutlet var nextButton: UIButton!
@@ -40,10 +47,10 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
         }
         if index == 4{
             UIView.animate(withDuration: 0.3) {
-                self.doneLabel.isHidden.toggle()
-                self.pageController.isHidden.toggle()
-                self.nextLabel.isHidden.toggle()
-                self.nextImageView.isHidden.toggle()
+                self.doneLabel.isHidden = false
+                self.pageController.isHidden = true
+                self.nextLabel.isHidden = true
+                self.nextImageView.isHidden = true
             }
         }
         if index > 4{

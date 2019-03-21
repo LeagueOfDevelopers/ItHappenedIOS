@@ -3,6 +3,8 @@ import UIKit
 class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     private var index = 0
     private let numberOfItemsSections = 5
+    private var name: String = ""
+    private var descriptionOfTracking: String = ""
     @IBOutlet var nextLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var doneLabel: UILabel!
@@ -33,9 +35,11 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
     @IBOutlet var previousButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var pageController: UIPageControl!
-    @IBAction func actionToPrint(_ sender: Any) {
-        index += 1
-        if index < numberOfItemsSections {
+    @IBAction func nextButton(_ sender: Any) {
+        if checkTextFields(){
+            index += 1
+        }
+        if index < numberOfItemsSections{
             scrollMenuAtIndex(menuIndex: index)
             pageController.currentPage = index
         }
@@ -72,7 +76,18 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
     
 }
 
-extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource, cellNameDelegate {
+    func getNameAndDescription(name: String, description: String) {
+        self.name = name
+        self.descriptionOfTracking = description
+    }
+    func checkTextFields() -> Bool{
+        if self.name.isEmpty || self.descriptionOfTracking.isEmpty{
+            return false
+        }
+        return true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberOfItemsSections
     }
@@ -94,7 +109,8 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath)
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath) as! NameCollectionViewCell
+        cell.delegate = self as? cellNameDelegate
         return cell
     }
     

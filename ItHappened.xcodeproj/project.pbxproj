@@ -12,6 +12,7 @@
 		70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3921B30A8500AECE8C /* Tracking.swift */; };
 		70090B3C21B30A9700AECE8C /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3B21B30A9700AECE8C /* TrackingTests.swift */; };
 		7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023F07222392A090081760C /* RatingCollectionViewCell.swift */; };
+		704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B29712242CBCE004D958A /* NameCollectionViewCell.swift */; };
 		7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */; };
 		7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28621BAA7F9005E657D /* TrackingDataSource.swift */; };
 		7063F28921BAC68F005E657D /* InMemoryRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */; };
@@ -61,6 +62,7 @@
 		70090B3921B30A8500AECE8C /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		70090B3B21B30A9700AECE8C /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
 		7023F07222392A090081760C /* RatingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCollectionViewCell.swift; sourceTree = "<group>"; };
+		704B29712242CBCE004D958A /* NameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCollectionViewCell.swift; sourceTree = "<group>"; };
 		7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7063F28621BAA7F9005E657D /* TrackingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSource.swift; sourceTree = "<group>"; };
 		7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepositoryTests.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
 				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
 				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
+				704B29712242CBCE004D958A /* NameCollectionViewCell.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,
 				7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */,
+				704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +725,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FFB9VV44X;
 				INFOPLIST_FILE = ItHappened/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -741,7 +745,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2FFB9VV44X;
 				INFOPLIST_FILE = ItHappened/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -22,6 +22,7 @@
 		7099AC8121AACA0C005A8E8B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8021AACA0C005A8E8B /* Event.swift */; };
 		7099AC8321AACA18005A8E8B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8221AACA18005A8E8B /* Rating.swift */; };
 		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
+		70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD682722444C2700841234 /* ColorCollectionViewCell.swift */; };
 		70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */; };
 		70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796921A1801200C39960 /* AppDelegate.swift */; };
 		70B6796C21A1801200C39960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796B21A1801200C39960 /* ViewController.swift */; };
@@ -72,6 +73,7 @@
 		7099AC8021AACA0C005A8E8B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7099AC8221AACA18005A8E8B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		70AD682722444C2700841234 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingViewController.swift; sourceTree = "<group>"; };
 		70B6796621A1801200C39960 /* ItHappened.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItHappened.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B6796921A1801200C39960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
 				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
 				704B29712242CBCE004D958A /* NameCollectionViewCell.swift */,
+				70AD682722444C2700841234 /* ColorCollectionViewCell.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */,
 				70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */,
 				70F3472C223481470075EAA9 /* MainViewController.swift in Sources */,
 				7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */,

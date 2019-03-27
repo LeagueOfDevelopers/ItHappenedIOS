@@ -1,7 +1,7 @@
 import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout {
-    private let numberOfColors:[Int:String] = [0:"blue", 1:"pink", 2:"yellow",3:"green", 4:"violet"]
+    private let numberOfColors:[String] = ["#00AC6B","#3D9200","#7C07A9","#60D6A9","#95a31a","#007046","#7986CB","#26537C","#50026E","#a9a9a9","#A64D00","#B564D4","#BFB430","#FF7600"]
     @IBOutlet var collectionView: UICollectionView!
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -18,7 +18,7 @@ extension ColorCollectionViewCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colorCell", for: indexPath) as? ColorCollectionCell
-        let color: String = numberOfColors[indexPath.row]!
+        let color: String = numberOfColors[indexPath.row]
         cell!.checkColor.isHidden = true
         cell!.backgroundColor = UIColor(named: "\(color)")
         cell!.layer.cornerRadius = cell!.frame.height / 2

@@ -2,15 +2,13 @@ import UIKit
 
 class NameCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var descriptionTextView: UITextView!
     
     weak var delegate: cellNameDelegate?
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        delegate?.getNameAndDescription(name: nameTextField.text!, description: descriptionTextView.text)
+        delegate?.getName(name: nameTextField.text!)
         customizeFields()
     }
     
@@ -19,11 +17,8 @@ class NameCollectionViewCell: UICollectionViewCell {
         nameTextField.layer.cornerRadius = 4
         nameTextField.layer.borderColor = mint.cgColor
         nameTextField.layer.borderWidth = 1
-        descriptionTextView.layer.borderWidth = 1
-        descriptionTextView.layer.borderColor = mint.cgColor
-        descriptionTextView.layer.cornerRadius = 4
     }
 }
 protocol cellNameDelegate: class {
-    func getNameAndDescription(name: String, description: String)
+    func getName(name: String)
 }

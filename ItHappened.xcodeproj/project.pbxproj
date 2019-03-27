@@ -12,6 +12,7 @@
 		70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3921B30A8500AECE8C /* Tracking.swift */; };
 		70090B3C21B30A9700AECE8C /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3B21B30A9700AECE8C /* TrackingTests.swift */; };
 		7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023F07222392A090081760C /* RatingCollectionViewCell.swift */; };
+		70265077224C262C00D0016E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70265076224C262C00D0016E /* Extensions.swift */; };
 		704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B29712242CBCE004D958A /* NameCollectionViewCell.swift */; };
 		7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */; };
 		7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28621BAA7F9005E657D /* TrackingDataSource.swift */; };
@@ -24,6 +25,7 @@
 		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
 		70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD682722444C2700841234 /* ColorCollectionViewCell.swift */; };
 		70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */; };
+		70B2859922465C29006C363B /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */; };
 		70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796921A1801200C39960 /* AppDelegate.swift */; };
 		70B6796C21A1801200C39960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B6796B21A1801200C39960 /* ViewController.swift */; };
 		70B6796F21A1801200C39960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B6796D21A1801200C39960 /* Main.storyboard */; };
@@ -63,6 +65,7 @@
 		70090B3921B30A8500AECE8C /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		70090B3B21B30A9700AECE8C /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
 		7023F07222392A090081760C /* RatingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCollectionViewCell.swift; sourceTree = "<group>"; };
+		70265076224C262C00D0016E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		704B29712242CBCE004D958A /* NameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCollectionViewCell.swift; sourceTree = "<group>"; };
 		7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7063F28621BAA7F9005E657D /* TrackingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSource.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		70AD682722444C2700841234 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingViewController.swift; sourceTree = "<group>"; };
+		70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		70B6796621A1801200C39960 /* ItHappened.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItHappened.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B6796921A1801200C39960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70B6796B21A1801200C39960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
 				704B29712242CBCE004D958A /* NameCollectionViewCell.swift */,
 				70AD682722444C2700841234 /* ColorCollectionViewCell.swift */,
+				70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */,
+				70265076224C262C00D0016E /* Extensions.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -532,11 +538,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */,
+				70B2859922465C29006C363B /* ScaleCollectionViewCell.swift in Sources */,
 				70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */,
 				70F3472C223481470075EAA9 /* MainViewController.swift in Sources */,
 				7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */,
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */,
+				70265077224C262C00D0016E /* Extensions.swift in Sources */,
 				70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */,
 				70B6796C21A1801200C39960 /* ViewController.swift in Sources */,
 				7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */,
@@ -737,7 +745,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example..ItHappened;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -757,7 +765,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example..ItHappened;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

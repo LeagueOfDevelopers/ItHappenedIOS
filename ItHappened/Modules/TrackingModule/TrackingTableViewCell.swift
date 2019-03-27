@@ -13,7 +13,6 @@ class TrackingTableViewCell: UITableViewCell {
     @IBOutlet var color: UIImageView!
     @IBOutlet var name: UILabel!
     @IBOutlet var date: UILabel!
-    @IBOutlet var comment: UILabel!
 
     override func layoutSubviews() {
         super.layoutSubviews()

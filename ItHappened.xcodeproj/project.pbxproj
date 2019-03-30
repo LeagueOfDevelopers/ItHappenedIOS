@@ -13,11 +13,10 @@
 		70090B3C21B30A9700AECE8C /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3B21B30A9700AECE8C /* TrackingTests.swift */; };
 		7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023F07222392A090081760C /* RatingCollectionViewCell.swift */; };
 		7026507A224F9D1000D0016E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70265079224F9D1000D0016E /* Database.swift */; };
-		70265080224F9D7800D0016E /* Contract in Resources */ = {isa = PBXBuildFile; fileRef = 7026507B224F9D7800D0016E /* Contract */; };
-		70265081224F9D7800D0016E /* Presenter in Resources */ = {isa = PBXBuildFile; fileRef = 7026507C224F9D7800D0016E /* Presenter */; };
-		70265082224F9D7800D0016E /* View in Resources */ = {isa = PBXBuildFile; fileRef = 7026507D224F9D7800D0016E /* View */; };
-		70265083224F9D7800D0016E /* Interactor in Resources */ = {isa = PBXBuildFile; fileRef = 7026507E224F9D7800D0016E /* Interactor */; };
-		70265084224F9D7800D0016E /* Router in Resources */ = {isa = PBXBuildFile; fileRef = 7026507F224F9D7800D0016E /* Router */; };
+		702650A2224FA49700D0016E /* AddTrackingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A1224FA49700D0016E /* AddTrackingProtocols.swift */; };
+		702650A4224FA66100D0016E /* AddTrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A3224FA66100D0016E /* AddTrackingPresenter.swift */; };
+		702650A6224FA6AD00D0016E /* AddTrackingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */; };
+		702650A8224FA6BE00D0016E /* AddTrackingWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */; };
 		704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B29712242CBCE004D958A /* NameCollectionViewCell.swift */; };
 		7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */; };
 		7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28621BAA7F9005E657D /* TrackingDataSource.swift */; };
@@ -70,11 +69,10 @@
 		70090B3B21B30A9700AECE8C /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
 		7023F07222392A090081760C /* RatingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCollectionViewCell.swift; sourceTree = "<group>"; };
 		70265079224F9D1000D0016E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		7026507B224F9D7800D0016E /* Contract */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Contract; sourceTree = "<group>"; };
-		7026507C224F9D7800D0016E /* Presenter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Presenter; sourceTree = "<group>"; };
-		7026507D224F9D7800D0016E /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
-		7026507E224F9D7800D0016E /* Interactor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Interactor; sourceTree = "<group>"; };
-		7026507F224F9D7800D0016E /* Router */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Router; sourceTree = "<group>"; };
+		702650A1224FA49700D0016E /* AddTrackingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingProtocols.swift; sourceTree = "<group>"; };
+		702650A3224FA66100D0016E /* AddTrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingPresenter.swift; sourceTree = "<group>"; };
+		702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingInteractor.swift; sourceTree = "<group>"; };
+		702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingWireframe.swift; sourceTree = "<group>"; };
 		704B29712242CBCE004D958A /* NameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCollectionViewCell.swift; sourceTree = "<group>"; };
 		7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7063F28621BAA7F9005E657D /* TrackingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSource.swift; sourceTree = "<group>"; };
@@ -146,6 +144,18 @@
 				70265079224F9D1000D0016E /* Database.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		702650A9224FA7B100D0016E /* AddTrackingCells */ = {
+			isa = PBXGroup;
+			children = (
+				704B29712242CBCE004D958A /* NameCollectionViewCell.swift */,
+				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
+				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
+				70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */,
+				70AD682722444C2700841234 /* ColorCollectionViewCell.swift */,
+			);
+			path = AddTrackingCells;
 			sourceTree = "<group>";
 		};
 		7063F27C21BAA098005E657D /* Common */ = {
@@ -293,17 +303,12 @@
 		70FE3AF6223C170600EBAE9C /* AddTrackingModule */ = {
 			isa = PBXGroup;
 			children = (
+				702650A9224FA7B100D0016E /* AddTrackingCells */,
 				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
-				704B29712242CBCE004D958A /* NameCollectionViewCell.swift */,
-				70F347342235A6110075EAA9 /* CommentCollectionViewCell.swift */,
-				7023F07222392A090081760C /* RatingCollectionViewCell.swift */,
-				70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */,
-				70AD682722444C2700841234 /* ColorCollectionViewCell.swift */,
-				7026507B224F9D7800D0016E /* Contract */,
-				7026507C224F9D7800D0016E /* Presenter */,
-				7026507D224F9D7800D0016E /* View */,
-				7026507E224F9D7800D0016E /* Interactor */,
-				7026507F224F9D7800D0016E /* Router */,
+				702650A1224FA49700D0016E /* AddTrackingProtocols.swift */,
+				702650A3224FA66100D0016E /* AddTrackingPresenter.swift */,
+				702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */,
+				702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -441,12 +446,7 @@
 			files = (
 				70B6797421A1801300C39960 /* LaunchScreen.storyboard in Resources */,
 				70B6797121A1801300C39960 /* Assets.xcassets in Resources */,
-				70265081224F9D7800D0016E /* Presenter in Resources */,
-				70265080224F9D7800D0016E /* Contract in Resources */,
 				70B6796F21A1801200C39960 /* Main.storyboard in Resources */,
-				70265083224F9D7800D0016E /* Interactor in Resources */,
-				70265082224F9D7800D0016E /* View in Resources */,
-				70265084224F9D7800D0016E /* Router in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,10 +562,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702650A2224FA49700D0016E /* AddTrackingProtocols.swift in Sources */,
+				702650A8224FA6BE00D0016E /* AddTrackingWireframe.swift in Sources */,
 				70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */,
 				70B2859922465C29006C363B /* ScaleCollectionViewCell.swift in Sources */,
 				70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */,
 				70F3472C223481470075EAA9 /* MainViewController.swift in Sources */,
+				702650A4224FA66100D0016E /* AddTrackingPresenter.swift in Sources */,
 				7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */,
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				7026507A224F9D1000D0016E /* Database.swift in Sources */,
@@ -578,6 +581,7 @@
 				7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */,
 				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,
+				702650A6224FA6AD00D0016E /* AddTrackingInteractor.swift in Sources */,
 				7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */,
 				704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */,
 			);

@@ -1,6 +1,32 @@
 import UIKit
 
-class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout, AddTrackingViewProtocol {
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func changeNextButton(doneLabel: Bool, otherViews: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.doneLabel.isHidden = doneLabel
+            self.pageController.isHidden = otherViews
+            self.nextLabel.isHidden = otherViews
+            self.nextImageView.isHidden = otherViews
+        }
+    }
+    
+    func togglePreviousButton(toggle: Bool) {
+        previousButton.isHidden = toggle
+    }
+    
+    func goToPage(index: Int) {
+        scrollMenuAtIndex(menuIndex: index)
+        pageController.currentPage = index
+    }
+    
+
+    //MARK: Properties
+    var presenter: AddTrackingPresenterProtocol?
+    var wireframe: AddTrackingWireframeProtocol?
     private var index = 0
     private let numberOfItemsSections = 5
     private var name: String?
@@ -12,18 +38,21 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
         dismiss(animated: true, completion: nil)
     }
     @IBAction func previousButtonAction(_ sender: Any) {
-        checkIndexes()
+        self.index -= 1
+        presenter?.goToPreviousPage(index: self.index)
     }
     @IBOutlet var previousButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var pageController: UIPageControl!
     @IBAction func nextButton(_ sender: Any) {
-        checkNextButtonIndexes()
+        self.index += 1
+        presenter?.goToNextPage(index: self.index)
     }
     
-    
+    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        AddTrackingWireframe.createAddTrackingModule(addTrackingRef: self)
         collectionView.delegate = self as UICollectionViewDelegate
         collectionView.dataSource = self as UICollectionViewDataSource
         collectionView.isPagingEnabled = true
@@ -32,53 +61,6 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
         flowLayout.minimumLineSpacing = 0
 
     }
-    func checkNextButtonIndexes(){
-        if checkTextFields(){
-            index += 1
-        }
-        if index < numberOfItemsSections{
-            scrollMenuAtIndex(menuIndex: index)
-            pageController.currentPage = index
-        }
-        if index > 0{
-            previousButton.isHidden = false
-        }
-        else{
-            previousButton.isHidden = true
-        }
-        if index == numberOfItemsSections - 1{
-            UIView.animate(withDuration: 0.3) {
-                self.doneLabel.isHidden = false
-                self.pageController.isHidden = true
-                self.nextLabel.isHidden = true
-                self.nextImageView.isHidden = true
-            }
-        }
-        if index > 4{
-            dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func checkIndexes(){
-        index -= 1
-        if index >= 0{
-            scrollMenuAtIndex(menuIndex: index)
-            pageController.currentPage = index
-        }
-        if index > 0{
-            previousButton.isHidden = false
-        }
-        else{
-            previousButton.isHidden = true
-        }
-        if index == numberOfItemsSections - 2{
-            self.doneLabel.isHidden = true
-            self.pageController.isHidden = false
-            self.nextLabel.isHidden = false
-            self.nextImageView.isHidden = false
-        }
-    }
-    
 }
 
 extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource, cellNameDelegate, indexFromSControlDelegate, colorPickDelegate{
@@ -127,7 +109,7 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
         }
         if indexPath.item == 4{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath) as! ColorCollectionViewCell
-            cell.delegate = self as? colorPickDelegate
+            cell.delegate = self
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath) as! NameCollectionViewCell

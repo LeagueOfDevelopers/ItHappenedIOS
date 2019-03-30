@@ -81,18 +81,34 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackingCell" rowHeight="60" id="yad-Jg-TF2" userLabel="trackingCell" customClass="TrackingTableViewCell" customModule="ItHappened" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackingCell" rowHeight="70" id="yad-Jg-TF2" userLabel="trackingCell" customClass="TrackingTableViewCell" customModule="ItHappened" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yad-Jg-TF2" id="C1L-rj-QH7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIK-pg-JWM">
-                                                    <rect key="frame" x="37" y="9" width="361" height="47"/>
+                                                    <rect key="frame" x="37" y="9" width="361" height="51.5"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мое отслеживание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-m7-PpZ">
+                                                            <rect key="frame" x="0.0" y="-2.5" width="188" height="24"/>
+                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата последнего события" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lz-K1-SOg">
+                                                            <rect key="frame" x="0.0" y="35.5" width="188" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="J88-9t-HDn"/>
+                                                                <constraint firstAttribute="width" constant="188" id="U86-KB-1g1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                                            <color key="textColor" red="0.56078431370000004" green="0.5568627451" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhD-E5-vx1">
-                                                            <rect key="frame" x="263" y="4" width="98" height="16"/>
+                                                            <rect key="frame" x="263" y="35.5" width="98" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="fKz-x2-UHa"/>
                                                                 <constraint firstAttribute="width" constant="98" id="fOM-Hd-t68"/>
@@ -101,23 +117,20 @@
                                                             <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мое отслеживание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6j-m7-PpZ">
-                                                            <rect key="frame" x="0.0" y="11.5" width="188" height="24"/>
-                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="nhD-E5-vx1" firstAttribute="top" secondItem="RIK-pg-JWM" secondAttribute="top" constant="4" id="8Ap-Wf-b0D"/>
                                                         <constraint firstItem="b6j-m7-PpZ" firstAttribute="leading" secondItem="RIK-pg-JWM" secondAttribute="leading" id="BDG-wb-n7Q"/>
-                                                        <constraint firstItem="b6j-m7-PpZ" firstAttribute="centerY" secondItem="RIK-pg-JWM" secondAttribute="centerY" id="LTJ-Hd-rHe"/>
+                                                        <constraint firstItem="b6j-m7-PpZ" firstAttribute="centerY" secondItem="RIK-pg-JWM" secondAttribute="centerY" constant="-16.5" id="LTJ-Hd-rHe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nhD-E5-vx1" secondAttribute="bottom" id="iww-fY-psY"/>
                                                         <constraint firstAttribute="trailing" secondItem="nhD-E5-vx1" secondAttribute="trailing" id="pF8-6C-pyb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6lz-K1-SOg" secondAttribute="bottom" id="qGa-Uw-e98"/>
+                                                        <constraint firstItem="6lz-K1-SOg" firstAttribute="leading" secondItem="RIK-pg-JWM" secondAttribute="leading" id="y08-Y6-bFT"/>
+                                                        <constraint firstItem="nhD-E5-vx1" firstAttribute="leading" secondItem="6lz-K1-SOg" secondAttribute="trailing" constant="75" id="zfJ-8g-F5G"/>
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-no-Tv3">
-                                                    <rect key="frame" x="13" y="9" width="9" height="47"/>
+                                                    <rect key="frame" x="13" y="9" width="9" height="51.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="9" id="n67-uJ-f6A"/>
                                                     </constraints>
@@ -128,7 +141,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="RIK-pg-JWM" secondAttribute="trailing" constant="16" id="cPw-IN-UVW"/>
                                                 <constraint firstItem="6uE-no-Tv3" firstAttribute="top" secondItem="C1L-rj-QH7" secondAttribute="top" constant="9" id="hAq-6B-BvZ"/>
                                                 <constraint firstItem="RIK-pg-JWM" firstAttribute="leading" secondItem="6uE-no-Tv3" secondAttribute="trailing" constant="15" id="ltZ-zS-res"/>
-                                                <constraint firstAttribute="bottom" secondItem="RIK-pg-JWM" secondAttribute="bottom" constant="3.5" id="vw7-tW-pFo"/>
+                                                <constraint firstAttribute="bottom" secondItem="RIK-pg-JWM" secondAttribute="bottom" constant="9" id="vw7-tW-pFo"/>
                                                 <constraint firstItem="6uE-no-Tv3" firstAttribute="height" secondItem="RIK-pg-JWM" secondAttribute="height" id="xZu-8E-ls0"/>
                                                 <constraint firstItem="RIK-pg-JWM" firstAttribute="top" secondItem="C1L-rj-QH7" secondAttribute="top" constant="9" id="y8a-Fm-2zE"/>
                                             </constraints>
@@ -256,7 +269,7 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                     <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-MQ-qfD">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-MQ-qfD">
                                                     <rect key="frame" x="16" y="326" width="382" height="29"/>
                                                     <segments>
                                                         <segment title="Обязательно"/>
@@ -321,7 +334,7 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                     <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-3F-IVO">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-3F-IVO">
                                                     <rect key="frame" x="16" y="326" width="382" height="29"/>
                                                     <segments>
                                                         <segment title="Обязательно"/>
@@ -329,6 +342,9 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                         <segment title="Не хочу"/>
                                                     </segments>
                                                     <color key="tintColor" red="0.15686274510000001" green="0.75294117650000003" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="getValue:" destination="yXC-tN-XWL" eventType="valueChanged" id="XLy-lB-pR6"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </view>
@@ -393,7 +409,7 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                                     <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="часах, выученных словах, метрах" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Llb-Fr-hVe">
+                                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="часах, выученных словах, метрах" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Llb-Fr-hVe">
                                                                     <rect key="frame" x="0.0" y="35" width="382" height="30"/>
                                                                     <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -412,7 +428,7 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                                 <constraint firstAttribute="bottom" secondItem="Llb-Fr-hVe" secondAttribute="bottom" id="jCx-LN-8J7"/>
                                                             </constraints>
                                                         </view>
-                                                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k9R-4O-bM4">
+                                                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="k9R-4O-bM4">
                                                             <rect key="frame" x="16" y="326" width="382" height="29"/>
                                                             <segments>
                                                                 <segment title="Обязательно"/>
@@ -420,6 +436,9 @@ In general, use stack views to manage as much of your layout as possible. Resort
                                                                 <segment title="Не хочу"/>
                                                             </segments>
                                                             <color key="tintColor" red="0.15686274510000001" green="0.75294117650000003" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="getValue:" destination="mNq-0h-OV5" eventType="valueChanged" id="XGF-Zz-k6o"/>
+                                                            </connections>
                                                         </segmentedControl>
                                                     </subviews>
                                                     <constraints>

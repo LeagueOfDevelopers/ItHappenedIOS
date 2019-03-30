@@ -1,8 +1,11 @@
 import UIKit
 
 class ColorCollectionViewCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout {
-    private let numberOfColors:[String] = ["#00AC6B","#3D9200","#7C07A9","#60D6A9","#95a31a","#007046","#7986CB","#26537C","#50026E","#a9a9a9","#A64D00","#B564D4","#BFB430","#FF7600"]
+    private let numberOfColors:[String] = ["#4BA6EC","#FF528F","#975D99","#F8DB3B","#28C0BE","#FEACA1","#2FC961","#FE765D","#FFC562","#47ACD7","#6DCEF9","#DD3DAA"]
     @IBOutlet var collectionView: UICollectionView!
+    
+    weak var delegate: colorPickDelegate?
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.delegate = self as UICollectionViewDelegate
@@ -31,6 +34,7 @@ extension ColorCollectionViewCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? ColorCollectionCell
+        delegate?.getColor(color: numberOfColors[indexPath.row])
         checkColor(cell: cell!)
     }
     
@@ -42,6 +46,10 @@ extension ColorCollectionViewCell: UICollectionViewDelegate, UICollectionViewDat
         cell.checkColor.isHidden = false
     }
     
+}
+
+protocol colorPickDelegate: class{
+    func getColor(color: String)
 }
 
 class ColorCollectionCell: UICollectionViewCell{

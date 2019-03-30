@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     }
     
 
-    let heightForCell = 84
+    let heightForCell = 70
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()

@@ -27,14 +27,6 @@ class MainViewController: UIViewController {
         setNeedsStatusBarAppearanceUpdate()
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
-//        let db = Database()
-//        db.createTable()
-//        self.trackings = db.queryAllRows()
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-//        }
-//
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

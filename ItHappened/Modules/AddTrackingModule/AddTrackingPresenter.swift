@@ -10,7 +10,44 @@ import Foundation
 
 class AddTrackingPresenter: AddTrackingPresenterProtocol{
 
+    var name: String = "Your name"
+    var comment: Int = 0
+    var rating: Int = 0
+    var scale: Int = 0
+    var scaleName: String = "ScaleName"
+    var color: String = "#000000"
     
+    func getUserData(data: Any, for property: String) {
+        switch property {
+        case "name":
+            self.name = data as! String
+        case "scale":
+            self.scale = data as! Int
+        case "scaleName":
+            self.scaleName = data as! String
+        case "rating":
+            self.rating = data as! Int
+        case "comment":
+            self.comment = data as! Int
+        case "color":
+            self.color = data as! String
+        default:
+            print("")
+        }
+    }
+    
+    func getEnum(value: Int) -> TrackingCustomization{
+        switch value {
+        case 0:
+            return TrackingCustomization.None
+        case 1:
+            return TrackingCustomization.Optional
+        case 2:
+            return TrackingCustomization.Required
+        default:
+            return TrackingCustomization.None
+        }
+    }
     
     private var numberOfItemsSections = 5
     var view: AddTrackingViewProtocol?
@@ -32,16 +69,7 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
             view?.changeNextButton(doneLabel: false, otherViews: true)
         }
         if index > 4{
-            let tracking = Tracking(scaleName: "DIS IS SCATMAN",
-                                    trackingName: "Henlo",
-                                    id: 0,
-                                    scale: .Optional,
-                                    rating: .Required,
-                                    comment: .None,
-                                    eventCollection: [],
-                                    dateOfChange: Date(timeIntervalSinceReferenceDate: 3443),
-                                    isDeleted: false,
-                                    color: "#2FC961")
+            let tracking = Tracking(scaleName: self.scaleName, trackingName: self.name, id: 0, scale: getEnum(value: self.scale), rating: getEnum(value: self.rating), comment: getEnum(value: self.comment), eventCollection: [], dateOfChange: Date(), isDeleted: false, color: self.color)
             interactor?.writeInDatabase(tracking: tracking)
             view?.dismiss()
         }

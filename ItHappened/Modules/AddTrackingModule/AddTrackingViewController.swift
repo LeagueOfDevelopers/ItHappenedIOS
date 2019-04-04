@@ -65,22 +65,27 @@ class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowL
 
 extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewDataSource, cellNameDelegate, indexFromSControlDelegate, colorPickDelegate{
     func getName(name: String) {
-        self.name = name
-    }
-    func getValueFromComment(_ value: Int) {
-        print("selected COMMENT is \(value)")
-    }
-    func getValueFromRating(_ value: Int) {
-        print("selected RATING is \(value)")
-    }
-    func getValueFromScale(_ value: Int, scaleName: String) {
-        print("selected SCLAE is \(value) and NAME is \(scaleName)")
-    }
-    func getColor(color: String) {
-        print("Picked color is \(color)")
+        self.presenter?.getUserData(data: name, for: "name")
     }
     
-
+    func getValueFromComment(_ value: Int) {
+        presenter?.getUserData(data: value, for: "comment")
+    }
+    
+    func getValueFromRating(_ value: Int) {
+        presenter?.getUserData(data: value, for: "rating")
+    }
+    
+    func getValueFromScale(_ value: Int, scaleName: String) {
+        presenter?.getUserData(data: value, for: "scale")
+        presenter?.getUserData(data: scaleName, for: "scaleName")
+    }
+    
+    func getColor(color: String) {
+        presenter?.getUserData(data: color, for: "color")
+    }
+    
+    
     func checkTextFields() -> Bool{
         if self.name!.isEmpty {
             return false
@@ -94,26 +99,26 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath) as! CommentCollectionViewCell
-            cell.delegate = self
+            cell.delegate = self as? indexFromSControlDelegate
             return cell
         }
         if indexPath.item == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath) as! RatingCollectionViewCell
-            cell.delegate = self
+            cell.delegate = self as? indexFromSControlDelegate
             return cell
         }
         if indexPath.item == 3{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scale", for: indexPath) as! ScaleCollectionViewCell
-            cell.delegate = self
+            cell.delegate = self as? indexFromSControlDelegate
             return cell
         }
         if indexPath.item == 4{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath) as! ColorCollectionViewCell
-            cell.delegate = self
+            cell.delegate = self as? colorPickDelegate
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath) as! NameCollectionViewCell
-        cell.delegate = self
+        cell.delegate = self as? cellNameDelegate
         return cell
     }
     

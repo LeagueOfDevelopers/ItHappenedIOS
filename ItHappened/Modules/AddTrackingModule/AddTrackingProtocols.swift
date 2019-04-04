@@ -12,6 +12,7 @@ protocol AddTrackingPresenterProtocol: class {
     var interactor: AddTrackingInteractorProtocol?{get set}
     var wireframe: AddTrackingWireframeProtocol?{get set}
     
+    func getUserData(data: Any, for property: String)
     func goToNextPage(index: Int)
     func goToPreviousPage(index: Int)
 }

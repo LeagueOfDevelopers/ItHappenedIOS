@@ -304,8 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				702650A9224FA7B100D0016E /* AddTrackingCells */,
-				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
 				702650A1224FA49700D0016E /* AddTrackingProtocols.swift */,
+				70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */,
 				702650A3224FA66100D0016E /* AddTrackingPresenter.swift */,
 				702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */,
 				702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */,

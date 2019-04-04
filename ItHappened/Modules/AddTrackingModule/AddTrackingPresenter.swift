@@ -32,6 +32,17 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
             view?.changeNextButton(doneLabel: false, otherViews: true)
         }
         if index > 4{
+            let tracking = Tracking(scaleName: "DIS IS SCATMAN",
+                                    trackingName: "Henlo",
+                                    id: 0,
+                                    scale: .Optional,
+                                    rating: .Required,
+                                    comment: .None,
+                                    eventCollection: [],
+                                    dateOfChange: Date(timeIntervalSinceReferenceDate: 3443),
+                                    isDeleted: false,
+                                    color: "#2FC961")
+            interactor?.writeInDatabase(tracking: tracking)
             view?.dismiss()
         }
     }

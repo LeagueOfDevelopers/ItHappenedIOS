@@ -14,14 +14,27 @@ class MainViewController: UIViewController {
         let addTrackingViewController = storyboard?.instantiateViewController(withIdentifier: "addTrackingVC")
         self.present(addTrackingViewController!, animated: true)
     }
-    
-
+    var trackings:[Tracking] = []{
+        didSet{
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     let heightForCell = 70
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
         tableView.delegate = self as UITableViewDelegate
         tableView.dataSource = self as UITableViewDataSource
+//        let db = Database()
+//        db.createTable()
+//        self.trackings = db.queryAllRows()
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
+//
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,23 +45,27 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.barStyle = .black
     }
     
-    let colors = ["blue", "pink", "yellow", "green", "violet","blue", "pink", "yellow", "green", "violet"]
-
+    override func viewWillAppear(_ animated: Bool) {
+        let db = Database()
+        db.createTable()
+        self.trackings = db.queryAllRows()
+    }
+    
 }
 
 
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return trackings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackingCell", for: indexPath) as? TrackingTableViewCell
-        cell?.color.backgroundColor = UIColor(named: colors[indexPath.row])
+        cell?.color.backgroundColor = UIColor(named: trackings[indexPath.row].color)
         cell?.color.layer.cornerRadius = (cell?.color.frame.width)! / 2
-        cell?.name.text = "Мое отслеживание"
-        cell?.date.text = "Вчера"
+        cell?.name.text = trackings[indexPath.row].trackingName
+        cell?.date.text = trackings[indexPath.row].dateOfChange.datatypeValue
         return cell!
     }
     

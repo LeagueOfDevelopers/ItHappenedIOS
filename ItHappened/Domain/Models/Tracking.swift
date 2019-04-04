@@ -9,23 +9,21 @@
 import Foundation
 
 class Tracking{
-    var scaleName: String
+    var id: Int
     var trackingName : String
-    let trackingId : UUID
-    var trackingDate :  Date
+    var scaleName: String
     var scale : TrackingCustomization
     var rating : TrackingCustomization
     var comment : TrackingCustomization
     var eventCollection : [Event]
-    var dateOfChange : DateFormatter
+    var dateOfChange : Date
     var isDeleted : Bool
     var color : String
     
-    init (scaleName: String, trackingName : String, trackingId : UUID, trackingDate :  Date, scale : TrackingCustomization, rating : TrackingCustomization, comment : TrackingCustomization, eventCollection : [Event], dateOfChange : DateFormatter, isDeleted : Bool, color : String){
+    init (scaleName: String, trackingName : String, id : Int, scale : TrackingCustomization, rating : TrackingCustomization, comment : TrackingCustomization, eventCollection : [Event], dateOfChange : Date, isDeleted : Bool, color : String){
         self.scaleName = scaleName
         self.trackingName = trackingName
-        self.trackingId = trackingId
-        self.trackingDate = trackingDate
+        self.id = id
         self.scale = scale
         self.rating = rating
         self.comment = comment
@@ -39,10 +37,14 @@ class Tracking{
         case IllegalArgumentException(String)
     }
     //MARK: Functions
-    func getCurrentDate() -> DateFormatter{
+    func getCurrentDate() -> Date{
+        return self.dateOfChange
+    }
+    func getStringDate() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "y-MM-dd H:mm:ssZZZ"
-        return dateFormatter
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = dateFormatter.string(from: self.dateOfChange)
+        return stringDate
     }
     func addEvent(event : Event){
         try! customizationCheck(value: event.scale, trackingCustomiztion: scale)

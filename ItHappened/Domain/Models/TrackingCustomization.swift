@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TrackingCustomization {
+enum TrackingCustomization: String {
     case None
     case Optional
     case Required

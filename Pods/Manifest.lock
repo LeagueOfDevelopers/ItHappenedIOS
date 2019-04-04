@@ -1,16 +1,22 @@
 PODS:
-  - TTSegmentedControl (0.4.7)
+  - IQKeyboardManagerSwift (6.2.0)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
-  - TTSegmentedControl
+  - IQKeyboardManagerSwift
+  - SQLite.swift (~> 0.11.5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - TTSegmentedControl
+    - IQKeyboardManagerSwift
+    - SQLite.swift
 
 SPEC CHECKSUMS:
-  TTSegmentedControl: 422a8fab507a02a60050476d69d577052550f592
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-PODFILE CHECKSUM: fe841f3c76d833408cd540ab4f3c580768f72c2e
+PODFILE CHECKSUM: 8c460a221a2f1c13229864139266e10e3ee75596
 
 COCOAPODS: 1.6.0

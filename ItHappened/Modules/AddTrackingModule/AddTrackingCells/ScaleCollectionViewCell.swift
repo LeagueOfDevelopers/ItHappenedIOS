@@ -13,6 +13,7 @@ class ScaleCollectionViewCell: UICollectionViewCell {
         else {
             scaleTextField.isEnabled = true
             changeColorToMint()
+            delegate?.getValueFromScale(segmentedControl.selectedSegmentIndex, scaleName: scaleTextField.text!)
         }
     }
 

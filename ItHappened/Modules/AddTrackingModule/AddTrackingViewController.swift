@@ -1,6 +1,16 @@
 import UIKit
 
 class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout, AddTrackingViewProtocol {
+    func showErrorButton() {
+        UIView.animate(withDuration: 0.3) {
+            self.nextButton.backgroundColor = UIColor(displayP3Red: 255.0/255, green: 221.0/255, blue: 100.0/255, alpha: 1)
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.nextButton.backgroundColor = UIColor(displayP3Red: 40.0/255, green: 192.0/255, blue: 190.0/255, alpha: 1)
+        }
+        self.index -= 1
+    }
+    
     func dismiss() {
         dismiss(animated: true, completion: nil)
     }
@@ -77,6 +87,7 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func getValueFromScale(_ value: Int, scaleName: String) {
+        print("scale is \(value) and scaleName is \(scaleName)")
         presenter?.getUserData(data: value, for: "scale")
         presenter?.getUserData(data: scaleName, for: "scaleName")
     }

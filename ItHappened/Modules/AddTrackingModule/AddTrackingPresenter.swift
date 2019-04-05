@@ -10,12 +10,17 @@ import Foundation
 
 class AddTrackingPresenter: AddTrackingPresenterProtocol{
 
-    var name: String = "Your name"
-    var comment: Int = 0
-    var rating: Int = 0
-    var scale: Int = 0
-    var scaleName: String = "ScaleName"
-    var color: String = "#000000"
+    var name: String = ""
+    var comment: Int = 3
+    var rating: Int = 3
+    var scale: Int = 3
+    var scaleName: String = ""
+    var color: String = ""
+    private var numberOfItemsSections = 5
+    var view: AddTrackingViewProtocol?
+    var wireframe: AddTrackingWireframeProtocol?
+    var interactor: AddTrackingInteractorProtocol?
+    let numbersChecking = [0,1,2]
     
     func getUserData(data: Any, for property: String) {
         switch property {
@@ -48,14 +53,29 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
             return TrackingCustomization.None
         }
     }
-    
-    private var numberOfItemsSections = 5
-    var view: AddTrackingViewProtocol?
-    var wireframe: AddTrackingWireframeProtocol?
-    var interactor: AddTrackingInteractorProtocol?
 
     
     func goToNextPage(index: Int) {
+        if index == 1 && self.name.isEmpty{
+            view?.showErrorButton()
+            return
+        }
+        if index == 2 && !self.numbersChecking.contains(self.comment){
+            view?.showErrorButton()
+            return
+        }
+        if index == 3 && !self.numbersChecking.contains(self.rating){
+            view?.showErrorButton()
+            return
+        }
+        if index == 4 && ((self.scale == 0 && self.scaleName.isEmpty) || (self.scale == 1) && self.scaleName.isEmpty){
+            view?.showErrorButton()
+            return
+        }
+        if index == 5 && self.color.isEmpty{
+            view?.showErrorButton()
+            return
+        }
         if index < numberOfItemsSections{
             view!.goToPage(index: index)
         }

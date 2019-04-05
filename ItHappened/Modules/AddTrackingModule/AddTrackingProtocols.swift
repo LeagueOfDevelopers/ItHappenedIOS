@@ -6,6 +6,7 @@ protocol AddTrackingViewProtocol: class {
     func goToPage(index: Int)
     func togglePreviousButton(toggle: Bool)
     func dismiss()
+    func showErrorButton()
 }
 protocol AddTrackingPresenterProtocol: class {
     var view: AddTrackingViewProtocol?{get set}

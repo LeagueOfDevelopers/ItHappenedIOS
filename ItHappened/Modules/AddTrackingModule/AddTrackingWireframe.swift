@@ -14,6 +14,7 @@ class AddTrackingWireframe: AddTrackingWireframeProtocol {
         addTrackingRef.presenter = presenter
         addTrackingRef.presenter?.view = addTrackingRef
         addTrackingRef.presenter?.interactor = AddTrackingInteractor()
+        addTrackingRef.presenter?.interactor?.dataManager = AddTrackingDataManager()
     }
     
 }

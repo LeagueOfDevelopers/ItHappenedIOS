@@ -22,5 +22,10 @@ protocol AddTrackingWireframeProtocol: class {
     static func createAddTrackingModule(addTrackingRef: AddTrackingViewController)
 }
 protocol AddTrackingInteractorProtocol: class {
+    var dataManager: AddTrackingDataManagerProtocol? {get set}
+    
     func writeInDatabase(tracking: Tracking)
+}
+protocol AddTrackingDataManagerProtocol: class{
+    func writeInDataBase(tracking: Tracking)
 }

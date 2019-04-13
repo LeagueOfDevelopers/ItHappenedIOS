@@ -1,9 +1,9 @@
 import Foundation
 
 class AddTrackingInteractor: AddTrackingInteractorProtocol {
+    var dataManager: AddTrackingDataManagerProtocol?
+    
     func writeInDatabase(tracking: Tracking) {
-        let database = Database()
-        database.createTable()
-        database.insert(tracking: tracking)
+        dataManager?.writeInDataBase(tracking: tracking)
     }
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gbb-aX-LpQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Статистика-->
+        <scene sceneID="gG0-7k-21K">
+            <objects>
+                <viewController id="Gbb-aX-LpQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esD-Te-Q1o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="blue"/>
+                        <viewLayoutGuide key="safeArea" id="jWu-wa-Ir8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Статистика" image="statistics" selectedImage="statistics" id="9z0-1Z-Uec"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnK-Hf-avX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="-928"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="statistics" width="25" height="25"/>
+        <namedColor name="blue">
+            <color red="0.16078431372549021" green="0.52941176470588236" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

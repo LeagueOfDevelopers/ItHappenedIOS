@@ -18,12 +18,18 @@
 		702650A6224FA6AD00D0016E /* AddTrackingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */; };
 		702650A8224FA6BE00D0016E /* AddTrackingWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */; };
 		704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B29712242CBCE004D958A /* NameCollectionViewCell.swift */; };
+		7053E2FE2259831A009DA2C7 /* AddTrackingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053E2FD2259831A009DA2C7 /* AddTrackingDataManager.swift */; };
 		7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */; };
 		7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28621BAA7F9005E657D /* TrackingDataSource.swift */; };
 		7063F28921BAC68F005E657D /* InMemoryRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */; };
 		7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28A21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift */; };
 		7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F28E21BB12D9005E657D /* TrackingCustomization.swift */; };
 		7063F29121BB25C3005E657D /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F29021BB25C3005E657D /* Comparison.swift */; };
+		70666C2C2257DBD7005B0511 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70666C2B2257DBD7005B0511 /* DateExtension.swift */; };
+		706D987D2260CD0E00898CFF /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706D987C2260CD0E00898CFF /* History.storyboard */; };
+		706D98812260CD8800898CFF /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706D98802260CD8800898CFF /* Statistics.storyboard */; };
+		706D98832260CDBA00898CFF /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706D98822260CDBA00898CFF /* Account.storyboard */; };
+		706D98862260CEA700898CFF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D98852260CEA700898CFF /* AddEventViewController.swift */; };
 		7099AC8121AACA0C005A8E8B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8021AACA0C005A8E8B /* Event.swift */; };
 		7099AC8321AACA18005A8E8B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8221AACA18005A8E8B /* Rating.swift */; };
 		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
@@ -74,12 +80,18 @@
 		702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingInteractor.swift; sourceTree = "<group>"; };
 		702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingWireframe.swift; sourceTree = "<group>"; };
 		704B29712242CBCE004D958A /* NameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCollectionViewCell.swift; sourceTree = "<group>"; };
+		7053E2FD2259831A009DA2C7 /* AddTrackingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingDataManager.swift; sourceTree = "<group>"; };
 		7063F28221BAA487005E657D /* TrackingDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSourceProtocol.swift; sourceTree = "<group>"; };
 		7063F28621BAA7F9005E657D /* TrackingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingDataSource.swift; sourceTree = "<group>"; };
 		7063F28821BAC68F005E657D /* InMemoryRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryRepositoryTests.swift; sourceTree = "<group>"; };
 		7063F28A21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingServiceInFactInteractor.swift; sourceTree = "<group>"; };
 		7063F28E21BB12D9005E657D /* TrackingCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingCustomization.swift; sourceTree = "<group>"; };
 		7063F29021BB25C3005E657D /* Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
+		70666C2B2257DBD7005B0511 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		706D987C2260CD0E00898CFF /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		706D98802260CD8800898CFF /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		706D98822260CDBA00898CFF /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		706D98852260CEA700898CFF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		7099AC8021AACA0C005A8E8B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7099AC8221AACA18005A8E8B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
@@ -181,6 +193,9 @@
 			children = (
 				70BC9DDB2232ECC3007DA82C /* SanFrancisco */,
 				70B6796D21A1801200C39960 /* Main.storyboard */,
+				706D987C2260CD0E00898CFF /* History.storyboard */,
+				706D98802260CD8800898CFF /* Statistics.storyboard */,
+				706D98822260CDBA00898CFF /* Account.storyboard */,
 				70B6797221A1801300C39960 /* LaunchScreen.storyboard */,
 				70B6797021A1801300C39960 /* Assets.xcassets */,
 			);
@@ -193,6 +208,22 @@
 				70B6796921A1801200C39960 /* AppDelegate.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		70666C2A2257DBC5005B0511 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70666C2B2257DBD7005B0511 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		706D98842260CE7A00898CFF /* AddEventModule */ = {
+			isa = PBXGroup;
+			children = (
+				706D98852260CEA700898CFF /* AddEventViewController.swift */,
+			);
+			path = AddEventModule;
 			sourceTree = "<group>";
 		};
 		7099AC7E21AAC9D4005A8E8B /* Domain */ = {
@@ -240,6 +271,7 @@
 		70B6796821A1801200C39960 /* ItHappened */ = {
 			isa = PBXGroup;
 			children = (
+				70666C2A2257DBC5005B0511 /* Extensions */,
 				7063F28121BAA345005E657D /* Settings */,
 				7063F28021BAA300005E657D /* Recources */,
 				70FE3AF4223C16B900EBAE9C /* Modules */,
@@ -285,6 +317,7 @@
 		70FE3AF4223C16B900EBAE9C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				706D98842260CE7A00898CFF /* AddEventModule */,
 				70FE3AF6223C170600EBAE9C /* AddTrackingModule */,
 				70FE3AF5223C16F300EBAE9C /* TrackingModule */,
 			);
@@ -309,6 +342,7 @@
 				702650A3224FA66100D0016E /* AddTrackingPresenter.swift */,
 				702650A7224FA6BE00D0016E /* AddTrackingWireframe.swift */,
 				702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */,
+				7053E2FD2259831A009DA2C7 /* AddTrackingDataManager.swift */,
 			);
 			path = AddTrackingModule;
 			sourceTree = "<group>";
@@ -447,6 +481,9 @@
 				70B6797421A1801300C39960 /* LaunchScreen.storyboard in Resources */,
 				70B6797121A1801300C39960 /* Assets.xcassets in Resources */,
 				70B6796F21A1801200C39960 /* Main.storyboard in Resources */,
+				706D98812260CD8800898CFF /* Statistics.storyboard in Resources */,
+				706D98832260CDBA00898CFF /* Account.storyboard in Resources */,
+				706D987D2260CD0E00898CFF /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +513,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ItHappened/Pods-ItHappened-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
@@ -483,6 +521,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
@@ -564,6 +603,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7053E2FE2259831A009DA2C7 /* AddTrackingDataManager.swift in Sources */,
+				706D98862260CEA700898CFF /* AddEventViewController.swift in Sources */,
 				702650A2224FA49700D0016E /* AddTrackingProtocols.swift in Sources */,
 				702650A8224FA6BE00D0016E /* AddTrackingWireframe.swift in Sources */,
 				70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */,
@@ -578,6 +619,7 @@
 				70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */,
 				7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */,
 				70F347352235A6110075EAA9 /* CommentCollectionViewCell.swift in Sources */,
+				70666C2C2257DBD7005B0511 /* DateExtension.swift in Sources */,
 				70F3472E2234819C0075EAA9 /* TrackingTableViewCell.swift in Sources */,
 				7063F29121BB25C3005E657D /* Comparison.swift in Sources */,
 				7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */,

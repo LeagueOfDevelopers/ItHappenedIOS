@@ -68,7 +68,11 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
             view?.showErrorButton()
             return
         }
-        if index == 4 && ((self.scale == 0 && self.scaleName.isEmpty) || (self.scale == 1) && self.scaleName.isEmpty){
+        if index == 4 && !self.numbersChecking.contains(self.scale){
+            view?.showErrorButton()
+            return
+        }
+        if index == 4 && ((self.scale == 0 && self.scaleName.isEmpty) || (self.scale == 1 && self.scaleName.isEmpty)) {
             view?.showErrorButton()
             return
         }
@@ -89,7 +93,7 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
             view?.changeNextButton(doneLabel: false, otherViews: true)
         }
         if index > 4{
-            let tracking = Tracking(scaleName: self.scaleName, trackingName: self.name, id: 0, scale: getEnum(value: self.scale), rating: getEnum(value: self.rating), comment: getEnum(value: self.comment), eventCollection: [], dateOfChange: Date(), isDeleted: false, color: self.color)
+            let tracking = Tracking(scaleName: self.scaleName, trackingName: self.name, id: 0, scale: getEnum(value: self.scale), rating: getEnum(value: self.rating), comment: getEnum(value: self.comment), eventCollection: [], dateOfChange: Date().convertToLocalTime(), isDeleted: false, color: self.color)
             interactor?.writeInDatabase(tracking: tracking)
             view?.dismiss()
         }

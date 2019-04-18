@@ -44,11 +44,11 @@ class AddTrackingPresenter: AddTrackingPresenterProtocol{
     func getEnum(value: Int) -> TrackingCustomization{
         switch value {
         case 0:
-            return TrackingCustomization.None
+            return TrackingCustomization.Required
         case 1:
             return TrackingCustomization.Optional
         case 2:
-            return TrackingCustomization.Required
+            return TrackingCustomization.None
         default:
             return TrackingCustomization.None
         }

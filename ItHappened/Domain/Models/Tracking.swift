@@ -1,11 +1,3 @@
-//
-//  Tracking.swift
-//  ItHappened
-//
-//  Created by Victor on 29/11/2018.
-//  Copyright 2018 com.example.LoD. All rights reserved.
-//
-
 import Foundation
 
 class Tracking{
@@ -37,14 +29,14 @@ class Tracking{
         case IllegalArgumentException(String)
     }
     //MARK: Functions
-    func getCurrentDate() -> Date{
-        return self.dateOfChange
-    }
     func getStringDate() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let stringDate = dateFormatter.string(from: self.dateOfChange)
         return stringDate
+    }
+    func getCurrentDate() -> Date{
+        return self.dateOfChange
     }
     func addEvent(event : Event){
         try! customizationCheck(value: event.scale, trackingCustomiztion: scale)
@@ -61,10 +53,10 @@ class Tracking{
         self.scaleName = scaleName ?? self.scaleName
         self.color = color ?? self.color
     }
-    func removeEvent(eventId : UUID){
+    func removeEvent(eventId : Int){
         eventCollection.removeAll(where:{$0.eventId == eventId})
     }
-    func editEvent(eventId:UUID, scale : Double?, rating : Rating?, comment : String?) throws{
+    func editEvent(eventId:Int, scale : Int?, rating : Int?, comment : String?) throws{
         let event = eventCollection.first(where: {$0.eventId == eventId})
         if event != nil{
             event!.scale = scale ?? event!.scale
@@ -83,7 +75,7 @@ class Tracking{
             throw error.IllegalArgumentException("None customizations can not take a value")
         }
     }
-    func getEvent(eventId : UUID) throws -> Event {
+    func getEvent(eventId : Int) throws -> Event {
         let event = eventCollection.first(where: {$0.eventId == eventId})
         if event == nil{
             throw error.IllegalArgumentException("Event don't exist")

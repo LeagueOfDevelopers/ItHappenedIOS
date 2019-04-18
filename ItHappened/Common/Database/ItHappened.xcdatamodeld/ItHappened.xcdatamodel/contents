@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Events" representedClassName="Events" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scale" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wasDeleted" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="tracking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trackings" inverseName="event" inverseEntity="Trackings" syncable="YES"/>
+    </entity>
+    <entity name="Trackings" representedClassName="Trackings" syncable="YES" codeGenerationType="class">
+        <attribute name="color" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="577239360" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scaleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wasDeleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Events" inverseName="tracking" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Trackings" positionX="1.4453125" positionY="-242.52734375" width="128" height="193"/>
+        <element name="Events" positionX="278.54296875" positionY="-197.6484375" width="128" height="148"/>
+    </elements>
+</model>

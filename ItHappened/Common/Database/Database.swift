@@ -4,7 +4,7 @@ class Database {
     let fileName = "database.sqlite"
     var database: OpaquePointer?
     
-    func createTable(){
+    func createTrackingTable(){
         var createTableStatement: OpaquePointer? = nil
         
         let databaseUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.fileName)
@@ -26,7 +26,29 @@ class Database {
         
     }
     
-    func insert(tracking: Tracking) {
+    func createEventTable(){
+        var createTableStatement: OpaquePointer? = nil
+        
+        let databaseUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(self.fileName)
+        
+        sqlite3_open(databaseUrl.path, &database)
+        
+        let createTableStatementString = "CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY AUTOINCREMENT, trackingId INTEGER, dateOfChange TEXT, scale INTEGER, rating INTEGER, comment TEXT, isDeleted INTEGER, FOREIGN KEY(trackingId) REFERENCES trackings(id));"
+        
+        if sqlite3_prepare_v2(database, createTableStatementString, -1, &createTableStatement, nil) == SQLITE_OK {
+            if sqlite3_step(createTableStatement) == SQLITE_DONE {
+                print("Events table created.")
+            } else {
+                print("Events table could not be created.")
+            }
+        } else {
+            print("CREATE TABLE statement could not be prepared.")
+        }
+        sqlite3_finalize(createTableStatement)
+        
+    }
+    
+    func insertTracking(tracking: Tracking) {
         var insertStatement: OpaquePointer? = nil
         let insertStatementString = "INSERT INTO trackings (name, dateOfChange, scaleName, scale, rating, comment, isDeleted, color) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"
         if sqlite3_prepare_v2(database, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -60,6 +82,38 @@ class Database {
         }
         sqlite3_finalize(insertStatement)
     }
+    
+    func insertEvent(event: Event, idOfTracking: Int){
+        var insertStatement: OpaquePointer? = nil
+        let insertStatementString = "INSERT INTO events (trackingId, dateOfChange, scale, rating, comment, isDeleted) VALUES (?, ?, ?, ?, ?, ?);"
+        if sqlite3_prepare_v2(database, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+            let idOfTracking: Int32 = Int32(idOfTracking)
+            let date = event.getStringDate() as NSString
+            let scale: Int32 = Int32(event.scale)
+            let rating: Int32 = Int32(event.rating)
+            let comment = event.comment as NSString
+            var isDeleted: Int32 = 0
+            if event.isDeleted == true{
+                isDeleted = 1
+            }
+            sqlite3_bind_int(insertStatement, 1, idOfTracking)
+            sqlite3_bind_text(insertStatement, 2, date.utf8String, -1, nil)
+            sqlite3_bind_int(insertStatement, 3, scale)
+            sqlite3_bind_int(insertStatement, 4, rating)
+            sqlite3_bind_text(insertStatement, 5, comment.utf8String, -1, nil)
+            sqlite3_bind_int(insertStatement, 6, isDeleted)
+    
+            if sqlite3_step(insertStatement) == SQLITE_DONE {
+                print("Successfully inserted row.")
+            } else {
+                print("Could not insert row.")
+            }
+        } else {
+            print("INSERT statement could not be prepared.")
+        }
+        sqlite3_finalize(insertStatement)
+    }
+    
     
     func queryAllRows() -> [Tracking] {
         let queryStatementString = "SELECT * FROM trackings;"
@@ -96,6 +150,42 @@ class Database {
         sqlite3_finalize(queryStatement)
         return trackings
     }
+    
+//    func queryEvents(idOfTracking: Int) -> [Event]{
+//        let queryStatementString = "SELECT * FROM events WHERE trackingId = '\(idOfTracking)';"
+//        var events = [Event]()
+//        var queryStatement: OpaquePointer? = nil
+//        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+//            
+//            while (sqlite3_step(queryStatement) == SQLITE_ROW) {
+//                let id = sqlite3_column_int(queryStatement, 0)
+//                let name = sqlite3_column_text(queryStatement, 1)
+//                let date = sqlite3_column_text(queryStatement, 6)
+//                let dateString = String(cString: date!)
+//                let dateFormatter = DateFormatter()
+//                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//                let dateFromDateFormatter = dateFormatter.date(from: dateString)
+//                let scaleName = sqlite3_column_text(queryStatement, 2)
+//                let scale = sqlite3_column_text(queryStatement, 3)
+//                let rating = sqlite3_column_text(queryStatement, 4)
+//                let comment = sqlite3_column_text(queryStatement, 5)
+//                let isDeleted = sqlite3_column_int(queryStatement, 7)
+//                var isDeletedBool = false
+//                if Int(isDeleted) == 1{
+//                    isDeletedBool = true
+//                }
+//                let color = sqlite3_column_text(queryStatement, 8)
+//                let tracking = Tracking(scaleName: String(cString: scaleName!), trackingName: String(cString: name!), id: Int(id), scale: TrackingCustomization(rawValue: String(cString: scale!))!, rating: TrackingCustomization(rawValue: String(cString: rating!))!, comment: TrackingCustomization(rawValue: String(cString: comment!))!, eventCollection: [], dateOfChange: dateFromDateFormatter!, isDeleted: isDeletedBool, color: String(cString: color!))
+//                events.append(tracking)
+//            }
+//            
+//        } else {
+//            print("SELECT statement could not be prepared")
+//        }
+//        sqlite3_finalize(queryStatement)
+//        return events
+//    }
+//    
     
     func deleteAllRows() {
         let deleteStatementString = "DELETE FROM trackings"

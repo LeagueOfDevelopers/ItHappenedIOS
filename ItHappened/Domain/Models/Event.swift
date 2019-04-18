@@ -1,83 +1,73 @@
-//
-//  Event.swift
-//  ItHappened
-//
-//  Created by Victor on 25/11/2018.
-//  Copyright © 2018 com.example.LoD. All rights reserved.
-//
-
 import Foundation
 class Event{
     //MARK: Initialization
-    var eventId : UUID
-    var trackingId : UUID
-    var eventDate : Date
-    var scale : Double
-    var rating : Rating
+    var eventId : Int
+    var trackingId : Int
+    var dateOfChange : Date
+    var scale : Int
+    var rating : Int
     var comment : String
-    var dateOfChange : DateFormatter?
     var isDeleted : Bool?
     
-    init(eventId : UUID, trackingId: UUID, date: Date, scale : Double,
-         rating: Rating, comment : String, isDeleted: Bool = false){
+    init(eventId : Int, trackingId: Int, date: Date, scale : Int,
+         rating: Int, comment : String, isDeleted: Bool = false){
         self.eventId = eventId
         self.trackingId = trackingId
-        self.eventDate = date
+        self.dateOfChange = date
         self.scale = scale
         self.rating = rating
         self.comment = comment
-        self.dateOfChange = getCurrentDate()
         self.isDeleted = isDeleted
     }
     
     //MARK: Functions
-    func getCurrentDate() -> DateFormatter{
+    func getStringDate() -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "y-MM-dd H:mm:ssZZZ"
-        return dateFormatter
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = dateFormatter.string(from: self.dateOfChange)
+        return stringDate
     }
     func editDate(eventDate : Date){
-        self.eventDate = eventDate
-        self.dateOfChange = getCurrentDate()
+        self.dateOfChange = Date()
     }
-    func editScale(scale : Double){
+    func editScale(scale : Int){
         self.scale = scale
-        self.dateOfChange = getCurrentDate()
+        self.dateOfChange = Date()
     }
-    func editValueOfRating(rating: Rating){
+    func editValueOfRating(rating: Int){
         self.rating = rating
-        self.dateOfChange = getCurrentDate()
+        self.dateOfChange = Date()
     }
     func editComment(comment : String){
         self.comment = comment
-        self.dateOfChange = getCurrentDate()
+        self.dateOfChange = Date()
     }
     func removeEvent(){
         self.isDeleted = true
-        self.dateOfChange = getCurrentDate()
+        self.dateOfChange = Date()
     }
     func getEventDate() -> Date {
-        return self.eventDate
+        return self.dateOfChange
     }
     func setEventDate(date: Date){
-        self.eventDate = date
+        self.dateOfChange = date
     }
-    func getEventId() -> UUID{
+    func getEventId() -> Int{
         return self.eventId
     }
-    func setEventId(uuid: UUID){
+    func setEventId(uuid: Int){
         self.eventId = uuid
     }
-    func getScale() -> Double{
+    func getScale() -> Int{
         return self.scale
     }
-    func setScale(scale : Double){
+    func setScale(scale : Int){
         self.scale = scale
     }
-    func getRating() -> Rating{
+    func getRating() -> Int{
         return self.rating
     }
-    func setRating(rating : Rating){
+    func setRating(rating : Int){
         self.rating = rating
     }
     func getComment() -> String{
@@ -86,10 +76,10 @@ class Event{
     func setComment(comment : String){
         self.comment = comment
     }
-    func getTrackingId() -> UUID{
+    func getTrackingId() -> Int{
         return self.trackingId
     }
-    func setTrackingId(uuid : UUID){
+    func setTrackingId(uuid : Int){
         self.trackingId = uuid
     }
     func returnStatus() -> Bool?{

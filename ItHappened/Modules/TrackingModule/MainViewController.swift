@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
@@ -21,6 +22,7 @@ class MainViewController: UIViewController {
             }
         }
     }
+    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Trackings", keyForSort: "name")
     let heightForCell = 70
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,26 @@ class MainViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Назад"
         self.navigationItem.backBarButtonItem = backItem
+//        let context = CoreDataManager.instance.persistentContainer.viewContext
+//        let tracking = Trackings(context: context)
+//        tracking.id = UUID()
+//        tracking.name = "Tracking name with event"
+//        tracking.color = "#0000F0"
+//        tracking.wasDeleted = false
+//        tracking.date = Date() as NSDate
+//        let event = Events(context: context)
+//        event.id = UUID()
+//        event.wasDeleted = false
+//        event.date = Date() as NSDate
+//        tracking.addToEvent(event)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print(error)
+        }
+        
+        
+        CoreDataManager.instance.saveContext()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -41,9 +63,10 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let db = Database()
-        db.createTable()
-        self.trackings = db.queryAllRows()
+//        let db = Database()
+//        db.createTrackingTable()
+//        let trackings = db.queryAllRows()
+//        self.trackings = db.queryAllRows()
     }
     
 }
@@ -52,16 +75,22 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trackings.count
+        if let sections = fetchedResultsController.sections {
+            return sections[section].numberOfObjects
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackingCell", for: indexPath) as? TrackingTableViewCell
-        cell?.color.backgroundColor = UIColor(named: trackings[indexPath.row].color)
+//        cell?.color.backgroundColor = UIColor(named: trackings[indexPath.row].color)
+        cell?.color.backgroundColor = UIColor(named: "#2FC961")
+        let tracking = fetchedResultsController.object(at: indexPath) as? Trackings
         cell?.color.layer.cornerRadius = (cell?.color.frame.width)! / 2
-        cell?.name.text = trackings[indexPath.row].trackingName
-        
-        cell?.date.text = trackings[indexPath.row].dateOfChange.datatypeValue
+        cell?.name.text = tracking?.name
+        cell?.date.text = "Now"
+//        cell?.date.text = trackings[indexPath.row].dateOfChange.datatypeValue
         return cell!
     }
     

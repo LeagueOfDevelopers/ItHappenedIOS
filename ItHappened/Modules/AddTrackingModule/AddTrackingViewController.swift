@@ -2,12 +2,7 @@ import UIKit
 
 class AddTrackingViewController: UIViewController, UICollectionViewDelegateFlowLayout, AddTrackingViewProtocol {
     func showErrorButton() {
-        UIView.animate(withDuration: 0.3) {
-            self.nextButton.backgroundColor = UIColor(displayP3Red: 255.0/255, green: 221.0/255, blue: 100.0/255, alpha: 1)
-        }
-        UIView.animate(withDuration: 0.3) {
-            self.nextButton.backgroundColor = UIColor(displayP3Red: 40.0/255, green: 192.0/255, blue: 190.0/255, alpha: 1)
-        }
+        self.nextButton.showErrorButton()
         self.index -= 1
     }
     
@@ -110,26 +105,26 @@ extension AddTrackingViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "comment", for: indexPath) as! CommentCollectionViewCell
-            cell.delegate = self as? indexFromSControlDelegate
+            cell.delegate = self
             return cell
         }
         if indexPath.item == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rating", for: indexPath) as! RatingCollectionViewCell
-            cell.delegate = self as? indexFromSControlDelegate
+            cell.delegate = self
             return cell
         }
         if indexPath.item == 3{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "scale", for: indexPath) as! ScaleCollectionViewCell
-            cell.delegate = self as? indexFromSControlDelegate
+            cell.delegate = self
             return cell
         }
         if indexPath.item == 4{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colors", for: indexPath) as! ColorCollectionViewCell
-            cell.delegate = self as? colorPickDelegate
+            cell.delegate = self
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "name", for: indexPath) as! NameCollectionViewCell
-        cell.delegate = self as? cellNameDelegate
+        cell.delegate = self
         return cell
     }
     

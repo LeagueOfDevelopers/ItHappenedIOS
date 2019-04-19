@@ -40,6 +40,12 @@
 		70A04D5C2267F0F80024BA0D /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D582267F0F80024BA0D /* Events+CoreDataProperties.swift */; };
 		70A04D5D2267F0F80024BA0D /* Trackings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D592267F0F80024BA0D /* Trackings+CoreDataClass.swift */; };
 		70A04D5E2267F0F80024BA0D /* Trackings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D5A2267F0F80024BA0D /* Trackings+CoreDataProperties.swift */; };
+		70A04D602268B16C0024BA0D /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D5F2268B16C0024BA0D /* AddEventProtocols.swift */; };
+		70A04D62226902A60024BA0D /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D61226902A60024BA0D /* AddEventPresenter.swift */; };
+		70A04D64226902B30024BA0D /* AddEventInteactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D63226902B30024BA0D /* AddEventInteactor.swift */; };
+		70A04D66226902C00024BA0D /* AddEventWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D65226902C00024BA0D /* AddEventWireframe.swift */; };
+		70A04D68226902CF0024BA0D /* AddEventDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D67226902CF0024BA0D /* AddEventDataManager.swift */; };
+		70A04D6A2269401D0024BA0D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A04D692269401D0024BA0D /* UIButtonExtension.swift */; };
 		70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD682722444C2700841234 /* ColorCollectionViewCell.swift */; };
 		70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */; };
 		70B2859922465C29006C363B /* ScaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */; };
@@ -109,6 +115,12 @@
 		70A04D582267F0F80024BA0D /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		70A04D592267F0F80024BA0D /* Trackings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trackings+CoreDataClass.swift"; sourceTree = "<group>"; };
 		70A04D5A2267F0F80024BA0D /* Trackings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trackings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70A04D5F2268B16C0024BA0D /* AddEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventProtocols.swift; sourceTree = "<group>"; };
+		70A04D61226902A60024BA0D /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
+		70A04D63226902B30024BA0D /* AddEventInteactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventInteactor.swift; sourceTree = "<group>"; };
+		70A04D65226902C00024BA0D /* AddEventWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventWireframe.swift; sourceTree = "<group>"; };
+		70A04D67226902CF0024BA0D /* AddEventDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventDataManager.swift; sourceTree = "<group>"; };
+		70A04D692269401D0024BA0D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		70AD682722444C2700841234 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		70B0971E2237DE1500F411D4 /* AddTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingViewController.swift; sourceTree = "<group>"; };
 		70B2859822465C29006C363B /* ScaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -235,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				70666C2B2257DBD7005B0511 /* DateExtension.swift */,
+				70A04D692269401D0024BA0D /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,7 +255,12 @@
 		706D98842260CE7A00898CFF /* AddEventModule */ = {
 			isa = PBXGroup;
 			children = (
+				70A04D5F2268B16C0024BA0D /* AddEventProtocols.swift */,
 				706D98852260CEA700898CFF /* AddEventViewController.swift */,
+				70A04D61226902A60024BA0D /* AddEventPresenter.swift */,
+				70A04D63226902B30024BA0D /* AddEventInteactor.swift */,
+				70A04D65226902C00024BA0D /* AddEventWireframe.swift */,
+				70A04D67226902CF0024BA0D /* AddEventDataManager.swift */,
 			);
 			path = AddEventModule;
 			sourceTree = "<group>";
@@ -631,6 +649,7 @@
 				702650A2224FA49700D0016E /* AddTrackingProtocols.swift in Sources */,
 				702650A8224FA6BE00D0016E /* AddTrackingWireframe.swift in Sources */,
 				70AD682822444C2700841234 /* ColorCollectionViewCell.swift in Sources */,
+				70A04D6A2269401D0024BA0D /* UIButtonExtension.swift in Sources */,
 				70A04D5D2267F0F80024BA0D /* Trackings+CoreDataClass.swift in Sources */,
 				70B2859922465C29006C363B /* ScaleCollectionViewCell.swift in Sources */,
 				70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */,
@@ -642,19 +661,24 @@
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				7026507A224F9D1000D0016E /* Database.swift in Sources */,
 				7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */,
+				70A04D64226902B30024BA0D /* AddEventInteactor.swift in Sources */,
 				70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */,
 				70A04D5B2267F0F80024BA0D /* Events+CoreDataClass.swift in Sources */,
 				7063F28321BAA487005E657D /* TrackingDataSourceProtocol.swift in Sources */,
 				70F347352235A6110075EAA9 /* CommentCollectionViewCell.swift in Sources */,
 				70A04D5C2267F0F80024BA0D /* Events+CoreDataProperties.swift in Sources */,
+				70A04D62226902A60024BA0D /* AddEventPresenter.swift in Sources */,
+				70A04D68226902CF0024BA0D /* AddEventDataManager.swift in Sources */,
 				70666C2C2257DBD7005B0511 /* DateExtension.swift in Sources */,
 				70F3472E2234819C0075EAA9 /* TrackingTableViewCell.swift in Sources */,
 				7063F29121BB25C3005E657D /* Comparison.swift in Sources */,
 				7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */,
+				70A04D66226902C00024BA0D /* AddEventWireframe.swift in Sources */,
 				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,
 				702650A6224FA6AD00D0016E /* AddTrackingInteractor.swift in Sources */,
 				7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */,
+				70A04D602268B16C0024BA0D /* AddEventProtocols.swift in Sources */,
 				704B29722242CBCE004D958A /* NameCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

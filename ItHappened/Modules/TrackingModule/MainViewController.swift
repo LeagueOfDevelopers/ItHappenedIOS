@@ -1,29 +1,30 @@
-//
-//  MainViewController.swift
-//  ItHappened
-//
-//  Created by Victor on 10/03/2019.
-//  Copyright © 2019 com.example.LoD. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class MainViewController: UIViewController {
+    //MARK: Outlets and properties
+    let heightForCell = 70
     @IBOutlet var tableView: UITableView!
     @IBAction func addNewTracking(_ sender: Any) {
         let addTrackingViewController = storyboard?.instantiateViewController(withIdentifier: "addTrackingVC")
         self.present(addTrackingViewController!, animated: true)
     }
-    var trackings:[Tracking] = []{
+    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Trackings", keyForSort: "name")
+    var trackings:[Trackings] = []{
         didSet{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Trackings", keyForSort: "name")
-    let heightForCell = 70
+    
+    func convertToString(date: NSDate) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        let date = dateFormatter.string(from: date as Date)
+        return date
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNeedsStatusBarAppearanceUpdate()
@@ -32,26 +33,6 @@ class MainViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = "Назад"
         self.navigationItem.backBarButtonItem = backItem
-//        let context = CoreDataManager.instance.persistentContainer.viewContext
-//        let tracking = Trackings(context: context)
-//        tracking.id = UUID()
-//        tracking.name = "Tracking name with event"
-//        tracking.color = "#0000F0"
-//        tracking.wasDeleted = false
-//        tracking.date = Date() as NSDate
-//        let event = Events(context: context)
-//        event.id = UUID()
-//        event.wasDeleted = false
-//        event.date = Date() as NSDate
-//        tracking.addToEvent(event)
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            print(error)
-        }
-        
-        
-        CoreDataManager.instance.saveContext()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -63,10 +44,12 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        let db = Database()
-//        db.createTrackingTable()
-//        let trackings = db.queryAllRows()
-//        self.trackings = db.queryAllRows()
+        do {
+            try fetchedResultsController.performFetch()
+            trackings = fetchedResultsController.fetchedObjects as! [Trackings]
+        } catch {
+            print(error)
+        }
     }
     
 }
@@ -84,13 +67,12 @@ extension MainViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackingCell", for: indexPath) as? TrackingTableViewCell
-//        cell?.color.backgroundColor = UIColor(named: trackings[indexPath.row].color)
-        cell?.color.backgroundColor = UIColor(named: "#2FC961")
         let tracking = fetchedResultsController.object(at: indexPath) as? Trackings
+        print("THISHAIHIDHFIDS      \(tracking?.event?.allObjects.count)")
+        cell?.color.backgroundColor = UIColor(named: "\(tracking!.color!)")
         cell?.color.layer.cornerRadius = (cell?.color.frame.width)! / 2
         cell?.name.text = tracking?.name
-        cell?.date.text = "Now"
-//        cell?.date.text = trackings[indexPath.row].dateOfChange.datatypeValue
+        cell?.date.text = convertToString(date: (tracking?.date)!)
         return cell!
     }
     

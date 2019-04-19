@@ -12,7 +12,6 @@
 		70090B3A21B30A8500AECE8C /* Tracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3921B30A8500AECE8C /* Tracking.swift */; };
 		70090B3C21B30A9700AECE8C /* TrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70090B3B21B30A9700AECE8C /* TrackingTests.swift */; };
 		7023F07322392A090081760C /* RatingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023F07222392A090081760C /* RatingCollectionViewCell.swift */; };
-		7026507A224F9D1000D0016E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70265079224F9D1000D0016E /* Database.swift */; };
 		702650A2224FA49700D0016E /* AddTrackingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A1224FA49700D0016E /* AddTrackingProtocols.swift */; };
 		702650A4224FA66100D0016E /* AddTrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A3224FA66100D0016E /* AddTrackingPresenter.swift */; };
 		702650A6224FA6AD00D0016E /* AddTrackingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */; };
@@ -89,7 +88,6 @@
 		70090B3921B30A8500AECE8C /* Tracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracking.swift; sourceTree = "<group>"; };
 		70090B3B21B30A9700AECE8C /* TrackingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingTests.swift; sourceTree = "<group>"; };
 		7023F07222392A090081760C /* RatingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCollectionViewCell.swift; sourceTree = "<group>"; };
-		70265079224F9D1000D0016E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		702650A1224FA49700D0016E /* AddTrackingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingProtocols.swift; sourceTree = "<group>"; };
 		702650A3224FA66100D0016E /* AddTrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingPresenter.swift; sourceTree = "<group>"; };
 		702650A5224FA6AD00D0016E /* AddTrackingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrackingInteractor.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				70A04D572267F0F80024BA0D /* Events+CoreDataClass.swift */,
 				70A04D592267F0F80024BA0D /* Trackings+CoreDataClass.swift */,
 				70A04D542267EF9C0024BA0D /* CoreDataManager.swift */,
-				70265079224F9D1000D0016E /* Database.swift */,
 				70A04D472267D0FA0024BA0D /* ItHappened.xcdatamodeld */,
 				70A04D582267F0F80024BA0D /* Events+CoreDataProperties.swift */,
 				70A04D5A2267F0F80024BA0D /* Trackings+CoreDataProperties.swift */,
@@ -570,7 +567,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ItHappened/Pods-ItHappened-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -578,7 +575,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -673,7 +670,6 @@
 				70A04D552267EF9C0024BA0D /* CoreDataManager.swift in Sources */,
 				7063F28721BAA7F9005E657D /* TrackingDataSource.swift in Sources */,
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
-				7026507A224F9D1000D0016E /* Database.swift in Sources */,
 				7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */,
 				707C5FBD2269EB4600D92078 /* AllEventsTableViewController.swift in Sources */,
 				70A04D64226902B30024BA0D /* AddEventInteactor.swift in Sources */,

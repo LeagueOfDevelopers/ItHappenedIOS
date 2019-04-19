@@ -4,7 +4,7 @@
 target 'ItHappened' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 pod 'Cosmos', '~> 18.0'
-pod 'SQLite.swift', '~> 0.11.5'
+pod 'SwiftDate', '~> 5.0'
   use_frameworks!
 pod 'IQKeyboardManagerSwift'
   # Pods for ItHappened

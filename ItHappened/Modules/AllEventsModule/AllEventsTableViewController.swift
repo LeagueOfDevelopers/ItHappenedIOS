@@ -13,9 +13,16 @@ class AllEventsTableViewController: UITableViewController {
     
     func convertToString(date: NSDate) -> String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        let date = dateFormatter.string(from: date as Date)
-        return date
+        dateFormatter.dateFormat = "MM-dd hh:mm:ss"
+        let date = date as Date
+        if date.isToday{
+            return "Сегодня"
+        }
+        if date.isYesterday{
+            return "Вчера"
+        }
+        let dateFromNSDate = dateFormatter.string(from: date as Date)
+        return dateFromNSDate
     }
     
     override func viewDidLoad() {

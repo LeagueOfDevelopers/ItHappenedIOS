@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import SwiftDate
 
 class MainViewController: UIViewController {
     //MARK: Outlets and properties
@@ -21,8 +22,15 @@ class MainViewController: UIViewController {
     func convertToString(date: NSDate) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        let date = dateFormatter.string(from: date as Date)
-        return date
+        let date = date as Date
+        if date.isToday{
+            return "Сегодня"
+        }
+        if date.isYesterday{
+            return "Вчера"
+        }
+        let dateFromNSDate = dateFormatter.string(from: date as Date)
+        return dateFromNSDate
     }
     
     override func viewDidLoad() {

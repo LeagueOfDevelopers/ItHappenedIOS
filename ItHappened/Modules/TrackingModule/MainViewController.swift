@@ -9,7 +9,7 @@ class MainViewController: UIViewController {
         let addTrackingViewController = storyboard?.instantiateViewController(withIdentifier: "addTrackingVC")
         self.present(addTrackingViewController!, animated: true)
     }
-    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Trackings", keyForSort: "name")
+    var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Trackings", keyForSort: "name", ascending: true)
     var trackings:[Trackings] = []{
         didSet{
             DispatchQueue.main.async {
@@ -68,7 +68,7 @@ extension MainViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackingCell", for: indexPath) as? TrackingTableViewCell
         let tracking = fetchedResultsController.object(at: indexPath) as? Trackings
-        print("THISHAIHIDHFIDS      \(tracking?.event?.allObjects.count)")
+//        print("THISHAIHIDHFIDS      \(tracking?.event?.allObjects.count)")
         cell?.color.backgroundColor = UIColor(named: "\(tracking!.color!)")
         cell?.color.layer.cornerRadius = (cell?.color.frame.width)! / 2
         cell?.name.text = tracking?.name

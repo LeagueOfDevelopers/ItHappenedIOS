@@ -33,9 +33,9 @@ class CoreDataManager {
         return NSEntityDescription.entity(forEntityName: entityName, in: self.persistentContainer.viewContext)!
     }
     
-    func fetchedResultsController(entityName: String, keyForSort: String) -> NSFetchedResultsController<NSFetchRequestResult> {
+    func fetchedResultsController(entityName: String, keyForSort: String, ascending: Bool) -> NSFetchedResultsController<NSFetchRequestResult> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
-        let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: keyForSort, ascending: ascending)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.instance.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultsController

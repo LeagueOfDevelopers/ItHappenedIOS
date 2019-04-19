@@ -30,6 +30,8 @@
 		706D98812260CD8800898CFF /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706D98802260CD8800898CFF /* Statistics.storyboard */; };
 		706D98832260CDBA00898CFF /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706D98822260CDBA00898CFF /* Account.storyboard */; };
 		706D98862260CEA700898CFF /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D98852260CEA700898CFF /* AddEventViewController.swift */; };
+		707C5FBD2269EB4600D92078 /* AllEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C5FBC2269EB4600D92078 /* AllEventsTableViewController.swift */; };
+		707C5FBF2269F76200D92078 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707C5FBE2269F76200D92078 /* EventTableViewCell.swift */; };
 		7099AC8121AACA0C005A8E8B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8021AACA0C005A8E8B /* Event.swift */; };
 		7099AC8321AACA18005A8E8B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8221AACA18005A8E8B /* Rating.swift */; };
 		7099AC8521AC2C89005A8E8B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AC8421AC2C89005A8E8B /* EventTests.swift */; };
@@ -105,6 +107,8 @@
 		706D98802260CD8800898CFF /* Statistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		706D98822260CDBA00898CFF /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		706D98852260CEA700898CFF /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		707C5FBC2269EB4600D92078 /* AllEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsTableViewController.swift; sourceTree = "<group>"; };
+		707C5FBE2269F76200D92078 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		7099AC8021AACA0C005A8E8B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7099AC8221AACA18005A8E8B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		7099AC8421AC2C89005A8E8B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
@@ -265,6 +269,15 @@
 			path = AddEventModule;
 			sourceTree = "<group>";
 		};
+		707C5FBB2269EB2700D92078 /* AllEventsModule */ = {
+			isa = PBXGroup;
+			children = (
+				707C5FBC2269EB4600D92078 /* AllEventsTableViewController.swift */,
+				707C5FBE2269F76200D92078 /* EventTableViewCell.swift */,
+			);
+			path = AllEventsModule;
+			sourceTree = "<group>";
+		};
 		7099AC7E21AAC9D4005A8E8B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +369,7 @@
 		70FE3AF4223C16B900EBAE9C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				707C5FBB2269EB2700D92078 /* AllEventsModule */,
 				706D98842260CE7A00898CFF /* AddEventModule */,
 				70FE3AF6223C170600EBAE9C /* AddTrackingModule */,
 				70FE3AF5223C16F300EBAE9C /* TrackingModule */,
@@ -661,6 +675,7 @@
 				7099AC8321AACA18005A8E8B /* Rating.swift in Sources */,
 				7026507A224F9D1000D0016E /* Database.swift in Sources */,
 				7063F28B21BB0DD8005E657D /* TrackingServiceInFactInteractor.swift in Sources */,
+				707C5FBD2269EB4600D92078 /* AllEventsTableViewController.swift in Sources */,
 				70A04D64226902B30024BA0D /* AddEventInteactor.swift in Sources */,
 				70B0971F2237DE1500F411D4 /* AddTrackingViewController.swift in Sources */,
 				70A04D5B2267F0F80024BA0D /* Events+CoreDataClass.swift in Sources */,
@@ -673,6 +688,7 @@
 				70F3472E2234819C0075EAA9 /* TrackingTableViewCell.swift in Sources */,
 				7063F29121BB25C3005E657D /* Comparison.swift in Sources */,
 				7063F28F21BB12D9005E657D /* TrackingCustomization.swift in Sources */,
+				707C5FBF2269F76200D92078 /* EventTableViewCell.swift in Sources */,
 				70A04D66226902C00024BA0D /* AddEventWireframe.swift in Sources */,
 				7099AC8121AACA0C005A8E8B /* Event.swift in Sources */,
 				70B6796A21A1801200C39960 /* AppDelegate.swift in Sources */,

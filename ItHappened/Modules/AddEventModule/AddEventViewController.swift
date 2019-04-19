@@ -49,6 +49,9 @@ class AddEventViewController: UIViewController, AddEventViewProtocol {
         self.doneButton.showErrorButton()
     }
     
+    func hideView(view: UIView){
+        
+    }
     
     func checkTrackingForConditions(){
         if tracking?.scale == "None"{
@@ -60,8 +63,6 @@ class AddEventViewController: UIViewController, AddEventViewProtocol {
         if tracking?.rating == "None"{
             self.ratingView.isHidden = true
         }
-        else{
-            scaleComment.text = ("Будем измерять в \(tracking!.scaleName!)")
-        }
+        scaleComment.text = ("Будем измерять в \(tracking!.scaleName!)")
     }
 }
